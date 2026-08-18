@@ -1,0 +1,541 @@
+{
+  "version": 1,
+  "units": "meters_radians",
+  "pressure_unit": "newton",
+  "channel_count": 22,
+  "notes": [
+    "Right frames are physical tactile links from the source URDF.",
+    "Left frames are massless semantic frames fitted to the integrated pad surfaces.",
+    "patch_size is [length, width] and is metadata for future simulator sites."
+  ],
+  "channels": [
+    {
+      "name": "right_index_proximal_pressure",
+      "hand": "right",
+      "finger": "index",
+      "region": "proximal",
+      "frame": "right_index_tactile_link_0",
+      "parent_link": "right_index_tactile_link_0",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.030155,
+        0.024894
+      ],
+      "mujoco_site": "right_index_proximal_site",
+      "mujoco_sensor": "right_index_proximal_touch"
+    },
+    {
+      "name": "right_index_middle_pressure",
+      "hand": "right",
+      "finger": "index",
+      "region": "middle",
+      "frame": "right_index_tactile_link_1",
+      "parent_link": "right_index_tactile_link_1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.022735,
+        0.023412
+      ],
+      "mujoco_site": "right_index_middle_site",
+      "mujoco_sensor": "right_index_middle_touch"
+    },
+    {
+      "name": "right_index_tip_pressure",
+      "hand": "right",
+      "finger": "index",
+      "region": "tip",
+      "frame": "right_index_tactile_link_2",
+      "parent_link": "right_index_tactile_link_2",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.027912,
+        0.025727
+      ],
+      "mujoco_site": "right_index_tip_site",
+      "mujoco_sensor": "right_index_tip_touch"
+    },
+    {
+      "name": "right_middle_proximal_pressure",
+      "hand": "right",
+      "finger": "middle",
+      "region": "proximal",
+      "frame": "right_middle_tactile_link_0",
+      "parent_link": "right_middle_tactile_link_0",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.030155,
+        0.024894
+      ],
+      "mujoco_site": "right_middle_proximal_site",
+      "mujoco_sensor": "right_middle_proximal_touch"
+    },
+    {
+      "name": "right_middle_middle_pressure",
+      "hand": "right",
+      "finger": "middle",
+      "region": "middle",
+      "frame": "right_middle_tactile_link_1",
+      "parent_link": "right_middle_tactile_link_1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.022735,
+        0.023412
+      ],
+      "mujoco_site": "right_middle_middle_site",
+      "mujoco_sensor": "right_middle_middle_touch"
+    },
+    {
+      "name": "right_middle_tip_pressure",
+      "hand": "right",
+      "finger": "middle",
+      "region": "tip",
+      "frame": "right_middle_tactile_link_2",
+      "parent_link": "right_middle_tactile_link_2",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.027912,
+        0.025727
+      ],
+      "mujoco_site": "right_middle_tip_site",
+      "mujoco_sensor": "right_middle_tip_touch"
+    },
+    {
+      "name": "right_ring_proximal_pressure",
+      "hand": "right",
+      "finger": "ring",
+      "region": "proximal",
+      "frame": "right_ring_tactile_link_0",
+      "parent_link": "right_ring_tactile_link_0",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.030155,
+        0.024894
+      ],
+      "mujoco_site": "right_ring_proximal_site",
+      "mujoco_sensor": "right_ring_proximal_touch"
+    },
+    {
+      "name": "right_ring_middle_pressure",
+      "hand": "right",
+      "finger": "ring",
+      "region": "middle",
+      "frame": "right_ring_tactile_link_1",
+      "parent_link": "right_ring_tactile_link_1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.022735,
+        0.023412
+      ],
+      "mujoco_site": "right_ring_middle_site",
+      "mujoco_sensor": "right_ring_middle_touch"
+    },
+    {
+      "name": "right_ring_tip_pressure",
+      "hand": "right",
+      "finger": "ring",
+      "region": "tip",
+      "frame": "right_ring_tactile_link_2",
+      "parent_link": "right_ring_tactile_link_2",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.027912,
+        0.025727
+      ],
+      "mujoco_site": "right_ring_tip_site",
+      "mujoco_sensor": "right_ring_tip_touch"
+    },
+    {
+      "name": "right_thumb_proximal_pressure",
+      "hand": "right",
+      "finger": "thumb",
+      "region": "proximal",
+      "frame": "right_thumb_tactile_link_0",
+      "parent_link": "right_thumb_tactile_link_0",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.052522,
+        0.024688
+      ],
+      "mujoco_site": "right_thumb_proximal_site",
+      "mujoco_sensor": "right_thumb_proximal_touch"
+    },
+    {
+      "name": "right_thumb_tip_pressure",
+      "hand": "right",
+      "finger": "thumb",
+      "region": "tip",
+      "frame": "right_thumb_tactile_link_1",
+      "parent_link": "right_thumb_tactile_link_1",
+      "xyz": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rpy": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.035306,
+        0.030282
+      ],
+      "mujoco_site": "right_thumb_tip_site",
+      "mujoco_sensor": "right_thumb_tip_touch"
+    },
+    {
+      "name": "left_index_proximal_pressure",
+      "hand": "left",
+      "finger": "index",
+      "region": "proximal",
+      "frame": "left_index_tactile_frame_0",
+      "parent_link": "left_index_link_1",
+      "xyz": [
+        0.02146,
+        0.0057,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.03016,
+        0.0249
+      ],
+      "mujoco_site": "left_index_proximal_site",
+      "mujoco_sensor": "left_index_proximal_touch"
+    },
+    {
+      "name": "left_index_middle_pressure",
+      "hand": "left",
+      "finger": "index",
+      "region": "middle",
+      "frame": "left_index_tactile_frame_1",
+      "parent_link": "left_index_link_2",
+      "xyz": [
+        0.01517,
+        0.0057,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.02274,
+        0.02342
+      ],
+      "mujoco_site": "left_index_middle_site",
+      "mujoco_sensor": "left_index_middle_touch"
+    },
+    {
+      "name": "left_index_tip_pressure",
+      "hand": "left",
+      "finger": "index",
+      "region": "tip",
+      "frame": "left_index_tactile_frame_2",
+      "parent_link": "left_index_link_3",
+      "xyz": [
+        0.01618,
+        0.00456,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.0257,
+        0.0257
+      ],
+      "mujoco_site": "left_index_tip_site",
+      "mujoco_sensor": "left_index_tip_touch"
+    },
+    {
+      "name": "left_middle_proximal_pressure",
+      "hand": "left",
+      "finger": "middle",
+      "region": "proximal",
+      "frame": "left_middle_tactile_frame_0",
+      "parent_link": "left_middle_link_1",
+      "xyz": [
+        0.02146,
+        0.0057,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.03016,
+        0.0249
+      ],
+      "mujoco_site": "left_middle_proximal_site",
+      "mujoco_sensor": "left_middle_proximal_touch"
+    },
+    {
+      "name": "left_middle_middle_pressure",
+      "hand": "left",
+      "finger": "middle",
+      "region": "middle",
+      "frame": "left_middle_tactile_frame_1",
+      "parent_link": "left_middle_link_2",
+      "xyz": [
+        0.01517,
+        0.0057,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.02274,
+        0.02342
+      ],
+      "mujoco_site": "left_middle_middle_site",
+      "mujoco_sensor": "left_middle_middle_touch"
+    },
+    {
+      "name": "left_middle_tip_pressure",
+      "hand": "left",
+      "finger": "middle",
+      "region": "tip",
+      "frame": "left_middle_tactile_frame_2",
+      "parent_link": "left_middle_link_3",
+      "xyz": [
+        0.01618,
+        0.00456,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.0257,
+        0.0257
+      ],
+      "mujoco_site": "left_middle_tip_site",
+      "mujoco_sensor": "left_middle_tip_touch"
+    },
+    {
+      "name": "left_ring_proximal_pressure",
+      "hand": "left",
+      "finger": "ring",
+      "region": "proximal",
+      "frame": "left_ring_tactile_frame_0",
+      "parent_link": "left_ring_link_1",
+      "xyz": [
+        0.02146,
+        0.0057,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.03016,
+        0.0249
+      ],
+      "mujoco_site": "left_ring_proximal_site",
+      "mujoco_sensor": "left_ring_proximal_touch"
+    },
+    {
+      "name": "left_ring_middle_pressure",
+      "hand": "left",
+      "finger": "ring",
+      "region": "middle",
+      "frame": "left_ring_tactile_frame_1",
+      "parent_link": "left_ring_link_2",
+      "xyz": [
+        0.01517,
+        0.0057,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.02274,
+        0.02342
+      ],
+      "mujoco_site": "left_ring_middle_site",
+      "mujoco_sensor": "left_ring_middle_touch"
+    },
+    {
+      "name": "left_ring_tip_pressure",
+      "hand": "left",
+      "finger": "ring",
+      "region": "tip",
+      "frame": "left_ring_tactile_frame_2",
+      "parent_link": "left_ring_link_3",
+      "xyz": [
+        0.01618,
+        0.00456,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.0257,
+        0.0257
+      ],
+      "mujoco_site": "left_ring_tip_site",
+      "mujoco_sensor": "left_ring_tip_touch"
+    },
+    {
+      "name": "left_thumb_proximal_pressure",
+      "hand": "left",
+      "finger": "thumb",
+      "region": "proximal",
+      "frame": "left_thumb_tactile_frame_0",
+      "parent_link": "left_thumb_link_2",
+      "xyz": [
+        0.03212,
+        0.00395,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.05074,
+        0.0247
+      ],
+      "mujoco_site": "left_thumb_proximal_site",
+      "mujoco_sensor": "left_thumb_proximal_touch"
+    },
+    {
+      "name": "left_thumb_tip_pressure",
+      "hand": "left",
+      "finger": "thumb",
+      "region": "tip",
+      "frame": "left_thumb_tactile_frame_1",
+      "parent_link": "left_thumb_link_3",
+      "xyz": [
+        0.0147,
+        0.00334,
+        0.0
+      ],
+      "rpy": [
+        -1.5707963267948966,
+        0.0,
+        0.0
+      ],
+      "patch_size": [
+        0.0294,
+        0.0303
+      ],
+      "mujoco_site": "left_thumb_tip_site",
+      "mujoco_sensor": "left_thumb_tip_touch"
+    }
+  ]
+}

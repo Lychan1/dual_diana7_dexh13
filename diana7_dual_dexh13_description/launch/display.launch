@@ -1,0 +1,7 @@
+<launch>
+  <arg name="model" default="$(find diana7_dual_dexh13_description)/urdf/dual_diana7_dexh13.urdf" />
+  <param name="robot_description" textfile="$(arg model)" />
+  <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+  <node name="rviz" pkg="rviz" type="rviz" required="true" />
+</launch>

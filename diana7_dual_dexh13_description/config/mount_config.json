@@ -1,0 +1,72 @@
+{
+  "flange_mesh": {
+    "source": "\u88c5\u914d\u4f532.STL",
+    "scale": [
+      0.001,
+      0.001,
+      0.001
+    ],
+    "mesh_origin_xyz": [
+      -0.03150086799263954,
+      -0.0325,
+      0.0
+    ],
+    "mesh_origin_rpy": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "axial_length": 0.08635882568359375,
+    "density_kg_m3": 2700.0
+  },
+  "right": {
+    "sensor_link": "right_sensor_link",
+    "flange_link": "right_dexh13_flange",
+    "palm_link": "right_palm_link",
+    "sensor_to_flange_xyz": [
+      0.0,
+      0.0,
+      0.046
+    ],
+    "sensor_to_flange_rpy": [
+      0.0,
+      0.0,
+      -2.00712864061204
+    ],
+    "flange_to_palm_xyz": [
+      0.0,
+      0.0,
+      0.08635882568359375
+    ],
+    "flange_to_palm_rpy": [
+      0.0,
+      -1.5707963267948966,
+      0.0
+    ]
+  },
+  "left": {
+    "sensor_link": "left_sensor_link",
+    "flange_link": "left_dexh13_flange",
+    "palm_link": "left_palm",
+    "sensor_to_flange_xyz": [
+      0.0,
+      0.0,
+      0.046
+    ],
+    "sensor_to_flange_rpy": [
+      0.0,
+      0.0,
+      -0.436332313817153
+    ],
+    "flange_to_palm_xyz": [
+      0.0,
+      0.0,
+      0.08635882568359375
+    ],
+    "flange_to_palm_rpy": [
+      0.0,
+      -1.5707963267948966,
+      0.0
+    ]
+  }
+}

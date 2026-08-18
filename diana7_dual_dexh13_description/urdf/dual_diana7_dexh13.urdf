@@ -1,0 +1,1956 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="dual_diana7_dexh13">
+  <link name="base_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.334630290185746 -5.12144748066699E-06 -0.238383830258516" />
+      <mass value="194.957683518387" />
+      <inertia ixx="15.7056427325815" ixy="-4.80254107146296E-08" ixz="0.00450756074372358" iyy="5.10803914211727" iyz="-4.13556348736192E-06" izz="16.3902992033727" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/dual_arm/base_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/dual_arm/base_link_collision.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_arm_base">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00153097191906452 0.00152031034664837 0.0524230280849149" />
+      <mass value="1.33110743457779" />
+      <inertia ixx="0.00695879790529406" ixy="9.99328685258342E-05" ixz="7.99577031212481E-05" iyy="0.00695365531716522" iyz="7.90796997368543E-05" izz="0.00729823323321907" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/base.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/base.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_arm_link_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="5.5234067920554E-05 0.0254878204920178 -0.0355441421264809" />
+      <mass value="1.09025546409174" />
+      <inertia ixx="0.00585031196428369" ixy="1.4630349447555E-07" ixz="1.35351687162397E-06" iyy="0.00645496952227061" iyz="-0.00104800484741808" izz="0.00459531291521244" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_1.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_joint_1" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.2856" />
+    <parent link="right_arm_base" />
+    <child link="right_arm_link_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="235" lower="-3.12" upper="3.12" velocity="2.618" />
+  </joint>
+  <link name="right_arm_link_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-3.62724763868157E-06 -0.0292741005087307 -0.041280769252073" />
+      <mass value="1.09515454908799" />
+      <inertia ixx="0.00575817488413533" ixy="4.92454490330888E-07" ixz="-5.75758988171004E-07" iyy="0.00452592941277235" iyz="0.00135206824645357" izz="0.0058904584276842" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_2.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.980392156862745 0.980392156862745 0.470588235294118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_joint_2" type="revolute">
+    <origin rpy="-1.5707963267949 0 0" xyz="0 0 0" />
+    <parent link="right_arm_link_1" />
+    <child link="right_arm_link_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="235" lower="-1.57" upper="1.57" velocity="2.618" />
+  </joint>
+  <link name="right_arm_link_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0114318213510691 0.0101707598694861 -0.15131695375217" />
+      <mass value="2.01686690128149" />
+      <inertia ixx="0.0362470020041464" ixy="-0.00099203786071914" ixz="-0.00494440140493448" iyy="0.0374857206758098" iyz="-0.00313859974095155" izz="0.00905850119342719" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_3.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_joint_3" type="revolute">
+    <origin rpy="1.5707963267949 0 0" xyz="0 -0.4586 0" />
+    <parent link="right_arm_link_2" />
+    <child link="right_arm_link_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="111" lower="-3.12" upper="3.12" velocity="3.1416" />
+  </joint>
+  <link name="right_arm_link_4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0240716370537192 -0.0235631728011761 -0.0366858174253844" />
+      <mass value="0.849743349506889" />
+      <inertia ixx="0.00313444335639628" ixy="-0.000681243351041131" ixz="0.000725380047812207" iyy="0.00333717642442852" iyz="0.000771057559109157" izz="0.0034847726349841" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_4.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_4.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_joint_4" type="revolute">
+    <origin rpy="-1.5707963267949 0 0" xyz="0.065 0 0" />
+    <parent link="right_arm_link_3" />
+    <child link="right_arm_link_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="111" lower="0" upper="3.05" velocity="3.1416" />
+  </joint>
+  <link name="right_arm_link_5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00867148011164554 -0.0383499684802812 -0.210246042699824" />
+      <mass value="1.20580396965245" />
+      <inertia ixx="0.0218436427570802" ixy="-0.000309747330693722" ixz="0.00089039094846826" iyy="0.0205896836785318" iyz="0.00493573923914426" izz="0.00372270106038425" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_5.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_5.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_joint_5" type="revolute">
+    <origin rpy="1.5707963267949 0 0" xyz="-0.0528 -0.47702 0" />
+    <parent link="right_arm_link_4" />
+    <child link="right_arm_link_5" />
+    <axis xyz="0 0 -1" />
+    <limit effort="54" lower="-3.12" upper="3.12" velocity="2.618" />
+  </joint>
+  <link name="right_arm_link_6">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.045897226241036 -0.00848579821002571 0.0078257811617596" />
+      <mass value="0.847157564562275" />
+      <inertia ixx="0.00286926864109097" ixy="-0.000341664135091818" ixz="-0.000318082297486923" iyy="0.0043294660443987" iyz="-5.82962380662208E-05" izz="0.00437292566725527" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_6.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.980392156862745 0.980392156862745 0.470588235294118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_6.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_joint_6" type="revolute">
+    <origin rpy="-1.5707963267949 -3.14159265359 0" xyz="-0.0122 0 -0.021619" />
+    <parent link="right_arm_link_5" />
+    <child link="right_arm_link_6" />
+    <axis xyz="0 0 -1" />
+    <limit effort="54" lower="-3.12" upper="3.12" velocity="2.618" />
+  </joint>
+  <link name="right_arm_link_7">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00117005127509708 5.03191940906655E-06 0.0151381784822231" />
+      <mass value="0.233956150459573" />
+      <inertia ixx="0.000142027360977168" ixy="1.76426389345981E-08" ixz="2.14635741626268E-07" iyy="0.000134421724783865" iyz="-1.29988689037464E-09" izz="0.000240242798572463" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_7.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_7.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_arm_joint_7" type="revolute">
+    <origin rpy="1.570796 0 0" xyz="0.087 0.1169 0" />
+    <parent link="right_arm_link_6" />
+    <child link="right_arm_link_7" />
+    <axis xyz="0 0 1" />
+    <limit effort="54" lower="-3.12" upper="3.12" velocity="3.1416" />
+  </joint>
+  <joint name="right_arm_joint" type="fixed">
+    <origin rpy="1.0409 -0.71191 0.36549" xyz="0 -0.097507 0.41144" />
+    <parent link="base_link" />
+    <child link="right_arm_base" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_sensor_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0006313031199916 -0.000794160879818095 0.0243277125962054" />
+      <mass value="0.3063178042108" />
+      <inertia ixx="0.000126933917860274" ixy="2.57222420485171E-07" ixz="7.89819122602258E-07" iyy="0.000127360299818112" iyz="-3.58467069572874E-08" izz="0.000242410809919104" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/dual_arm/right_sensor_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/dual_arm/right_sensor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_sensor_joint" type="fixed">
+    <origin rpy="0 3.14159265358979 0" xyz="0 0 0" />
+    <parent link="right_arm_link_7" />
+    <child link="right_sensor_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="left_arm_base">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00153097191906452 0.00152031034664837 0.0524230280849149" />
+      <mass value="1.33110743457779" />
+      <inertia ixx="0.00695879790529406" ixy="9.99328685258342E-05" ixz="7.99577031212481E-05" iyy="0.00695365531716522" iyz="7.90796997368543E-05" izz="0.00729823323321907" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/base.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/base.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_arm_link_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="5.5234067920554E-05 0.0254878204920178 -0.0355441421264809" />
+      <mass value="1.09025546409174" />
+      <inertia ixx="0.00585031196428369" ixy="1.4630349447555E-07" ixz="1.35351687162397E-06" iyy="0.00645496952227061" iyz="-0.00104800484741808" izz="0.00459531291521244" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_1.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.796078431372549 0.823529411764706 0.937254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_1.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_joint_1" type="revolute">
+    <origin rpy="0 0 0" xyz="0 0 0.2856" />
+    <parent link="left_arm_base" />
+    <child link="left_arm_link_1" />
+    <axis xyz="0 0 -1" />
+    <limit effort="235" lower="-3.12" upper="3.12" velocity="2.618" />
+  </joint>
+  <link name="left_arm_link_2">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-3.62724763868157E-06 -0.0292741005087307 -0.041280769252073" />
+      <mass value="1.09515454908799" />
+      <inertia ixx="0.00575817488413533" ixy="4.92454490330888E-07" ixz="-5.75758988171004E-07" iyy="0.00452592941277235" iyz="0.00135206824645357" izz="0.0058904584276842" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_2.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.980392156862745 0.980392156862745 0.470588235294118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_2.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_joint_2" type="revolute">
+    <origin rpy="-1.5707963267949 0 0" xyz="0 0 0" />
+    <parent link="left_arm_link_1" />
+    <child link="left_arm_link_2" />
+    <axis xyz="0 0 1" />
+    <limit effort="235" lower="-1.57" upper="1.57" velocity="2.618" />
+  </joint>
+  <link name="left_arm_link_3">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.0114318213510691 0.0101707598694861 -0.15131695375217" />
+      <mass value="2.01686690128149" />
+      <inertia ixx="0.0362470020041464" ixy="-0.00099203786071914" ixz="-0.00494440140493448" iyy="0.0374857206758098" iyz="-0.00313859974095155" izz="0.00905850119342719" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_3.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_3.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_joint_3" type="revolute">
+    <origin rpy="1.5707963267949 0 0" xyz="0 -0.4586 0" />
+    <parent link="left_arm_link_2" />
+    <child link="left_arm_link_3" />
+    <axis xyz="0 0 -1" />
+    <limit effort="111" lower="-3.12" upper="3.12" velocity="3.1416" />
+  </joint>
+  <link name="left_arm_link_4">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.0240716370537192 -0.0235631728011761 -0.0366858174253844" />
+      <mass value="0.849743349506889" />
+      <inertia ixx="0.00313444335639628" ixy="-0.000681243351041131" ixz="0.000725380047812207" iyy="0.00333717642442852" iyz="0.000771057559109157" izz="0.0034847726349841" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_4.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_4.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_joint_4" type="revolute">
+    <origin rpy="-1.5707963267949 0 0" xyz="0.065 0 0" />
+    <parent link="left_arm_link_3" />
+    <child link="left_arm_link_4" />
+    <axis xyz="0 0 1" />
+    <limit effort="111" lower="0" upper="3.05" velocity="3.1416" />
+  </joint>
+  <link name="left_arm_link_5">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.00867148011164554 -0.0383499684802812 -0.210246042699824" />
+      <mass value="1.20580396965245" />
+      <inertia ixx="0.0218436427570802" ixy="-0.000309747330693722" ixz="0.00089039094846826" iyy="0.0205896836785318" iyz="0.00493573923914426" izz="0.00372270106038425" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_5.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_5.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_joint_5" type="revolute">
+    <origin rpy="1.5707963267949 0 0" xyz="-0.0528 -0.47702 0" />
+    <parent link="left_arm_link_4" />
+    <child link="left_arm_link_5" />
+    <axis xyz="0 0 -1" />
+    <limit effort="54" lower="-3.12" upper="3.12" velocity="2.618" />
+  </joint>
+  <link name="left_arm_link_6">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.045897226241036 -0.00848579821002571 0.0078257811617596" />
+      <mass value="0.847157564562275" />
+      <inertia ixx="0.00286926864109097" ixy="-0.000341664135091818" ixz="-0.000318082297486923" iyy="0.0043294660443987" iyz="-5.82962380662208E-05" izz="0.00437292566725527" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_6.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.980392156862745 0.980392156862745 0.470588235294118 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 3.14159265359" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_6.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_joint_6" type="revolute">
+    <origin rpy="-1.5707963267949 -3.14159265359 0" xyz="-0.0122 0 -0.021619" />
+    <parent link="left_arm_link_5" />
+    <child link="left_arm_link_6" />
+    <axis xyz="0 0 -1" />
+    <limit effort="54" lower="-3.12" upper="3.12" velocity="2.618" />
+  </joint>
+  <link name="left_arm_link_7">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00117005127509708 5.03191940906655E-06 0.0151381784822231" />
+      <mass value="0.233956150459573" />
+      <inertia ixx="0.000142027360977168" ixy="1.76426389345981E-08" ixz="2.14635741626268E-07" iyy="0.000134421724783865" iyz="-1.29988689037464E-09" izz="0.000240242798572463" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_7.obj" />
+      </geometry>
+      <material name="">
+        <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/diana7/visual/obj/link_7.obj" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_arm_joint_7" type="revolute">
+    <origin rpy="1.570796 0 0" xyz="0.087 0.1169 0" />
+    <parent link="left_arm_link_6" />
+    <child link="left_arm_link_7" />
+    <axis xyz="0 0 1" />
+    <limit effort="54" lower="-3.12" upper="3.12" velocity="3.1416" />
+  </joint>
+  <joint name="left_arm_joint" type="fixed">
+    <origin rpy="1.0409 -0.71191 -2.7761" xyz="0 0.097507 0.41144" />
+    <parent link="base_link" />
+    <child link="left_arm_base" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="left_sensor_link">
+    <inertial>
+      <origin rpy="0 0 0" xyz="-0.000631303062396116 -0.000794160782422337 0.0243277126300799" />
+      <mass value="0.306317803863396" />
+      <inertia ixx="0.000126933917921841" ixy="2.57222336669211E-07" ixz="7.89818976807741E-07" iyy="0.000127360300281999" iyz="-3.5846649010714E-08" izz="0.000242410810367609" />
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/dual_arm/left_sensor_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/dual_arm/left_sensor_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_sensor_joint" type="fixed">
+    <origin rpy="0 3.14159265358979 0" xyz="0 0 0" />
+    <parent link="left_arm_link_7" />
+    <child link="left_sensor_link" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <material name="camera_aluminum">
+    <color rgba="0.5 0.5 0.5 1" />
+  </material>
+  <link name="right_palm_link">
+    <inertial>
+      <origin xyz="0.0619400889798107 0.000633777554448545 -0.00922401737694556" rpy="0 0 0" />
+      <mass value="0.114799444276486" />
+      <inertia ixx="0.000115656477451761" ixy="3.24423761159877E-06" ixz="4.40448289255065E-06" iyy="0.000144675400179227" iyz="-1.26436937122323E-06" izz="0.000233485399410628" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_palm_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_palm_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="right_index_link_0">
+    <inertial>
+      <origin xyz="-0.000308197926172649 8.39026403909315E-10 -8.96268664007938E-07" rpy="0 0 0" />
+      <mass value="0.000177081875037463" />
+      <inertia ixx="3.4763707795701E-09" ixy="1.07698689339673E-16" ixz="-4.6319757296773E-13" iyy="6.72350326843279E-10" iyz="-4.88407181627268E-17" izz="3.89708717262623E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_index_joint_0" type="revolute">
+    <origin xyz="0.13528 -0.0315 0.0017501" rpy="3.1416 0 3.1416" />
+    <parent link="right_palm_link" />
+    <child link="right_index_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.35" upper="0.35" effort="0" velocity="0" />
+  </joint>
+  <link name="right_index_link_1">
+    <inertial>
+      <origin xyz="0.019458668769933 -0.0089652904132522 -0.000103629286555107" rpy="0 0 0" />
+      <mass value="0.00781862122127028" />
+      <inertia ixx="7.54005717682309E-07" ixy="-1.78804290522348E-07" ixz="-3.16795998523565E-08" iyy="1.81037946922475E-06" iyz="-3.54790575910829E-09" izz="1.58839732926949E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_index_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="-1.5708 0 3.1416" />
+    <parent link="right_index_link_0" />
+    <child link="right_index_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_index_link_2">
+    <inertial>
+      <origin xyz="0.0137651413880091 -0.00728319097323554 -0.000338376807412472" rpy="0 0 0" />
+      <mass value="0.00444702440302546" />
+      <inertia ixx="3.57402969229919E-07" ixy="-2.93570876643459E-08" ixz="-7.17605723324856E-09" iyy="5.90573396738625E-07" iyz="-1.80789872592111E-09" izz="4.33465005909825E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_index_joint_2" type="revolute">
+    <origin xyz="0.039999 1.0069E-05 0" rpy="0 0 0" />
+    <parent link="right_index_link_1" />
+    <child link="right_index_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_index_link_3">
+    <inertial>
+      <origin xyz="0.00645566880354587 -0.0108151464713902 3.11426869692433E-06" rpy="0 0 0" />
+      <mass value="0.00370163834726037" />
+      <inertia ixx="1.63153786893549E-07" ixy="6.2613785984167E-08" ixz="-2.8930751066186E-10" iyy="3.8481939975164E-07" iyz="8.54539635528873E-10" izz="3.08433547663749E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_index_joint_3" type="revolute">
+    <origin xyz="0.030001 -1.0072E-05 0" rpy="0 0 0" />
+    <parent link="right_index_link_2" />
+    <child link="right_index_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_index_tactile_link_2">
+    <inertial>
+      <origin xyz="0.000109844961296346 0.0099416982219066 0.00443460180255373" rpy="0 0 0" />
+      <mass value="0.00413497205037458" />
+      <inertia ixx="2.22394583675105E-07" ixy="9.01967562427741E-10" ixz="8.94924483975294E-10" iyy="2.23755941796333E-07" iyz="2.47116794584231E-08" izz="3.54572754525545E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_tactile_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_tactile_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_index_tactile_joint_2" type="fixed">
+    <origin xyz="0.0029533 -0.0067786 0" rpy="1.3775 -1.5708 3.1413" />
+    <parent link="right_index_link_3" />
+    <child link="right_index_tactile_link_2" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_index_tactile_link_1">
+    <inertial>
+      <origin xyz="3.0446001686224E-05 0.0109528249877928 0.000700664923569766" rpy="0 0 0" />
+      <mass value="0.00146306414297665" />
+      <inertia ixx="5.85353582900128E-08" ixy="2.96653312598885E-11" ixz="-5.95294227147362E-13" iyy="6.03565233436984E-08" iyz="-1.48257364967186E-11" izz="1.15994427577965E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_tactile_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_tactile_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_index_tactile_joint_1" type="fixed">
+    <origin xyz="0.0041708 0.0024988 0" rpy="1.5708 -1.5708 3.1413" />
+    <parent link="right_index_link_2" />
+    <child link="right_index_tactile_link_1" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_index_tactile_link_0">
+    <inertial>
+      <origin xyz="-5.64660317428634E-06 0.014075020640723 0.00086164148054127" rpy="0 0 0" />
+      <mass value="0.00202349083525809" />
+      <inertia ixx="1.39860030184411E-07" ixy="1.33827478855186E-11" ixz="-1.25794008028026E-12" iyy="9.15846254269304E-08" iyz="-2.40330494074063E-10" izz="2.2769300433268E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_tactile_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_index_tactile_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_index_tactile_joint_0" type="fixed">
+    <origin xyz="0.00726310654650064 0.00249999999992634 0" rpy="-1.06831157850435 -1.57079631189374 -0.502484829452999" />
+    <parent link="right_index_link_1" />
+    <child link="right_index_tactile_link_0" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_middle_link_0">
+    <inertial>
+      <origin xyz="-0.000308197926172538 8.39026403909315E-10 -8.96268663952426E-07" rpy="0 0 0" />
+      <mass value="0.000177081875037461" />
+      <inertia ixx="3.47637077957008E-09" ixy="1.07698687177505E-16" ixz="-4.63197572968217E-13" iyy="6.72350326843274E-10" iyz="-4.88407181812721E-17" izz="3.8970871726262E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_joint_0" type="revolute">
+    <origin xyz="0.13528 0 0.0017501" rpy="3.1416 0 3.1416" />
+    <parent link="right_palm_link" />
+    <child link="right_middle_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.35" upper="0.35" effort="0" velocity="0" />
+  </joint>
+  <link name="right_middle_link_1">
+    <inertial>
+      <origin xyz="0.0194586697953215 -0.0089652904495495 -0.000103629595511856" rpy="0 0 0" />
+      <mass value="0.0078186203560971" />
+      <inertia ixx="7.54005690810802E-07" ixy="-1.78804386113988E-07" ixz="-3.16796063838823E-08" iyy="1.81038006347822E-06" iyz="-3.54791904709937E-09" izz="1.58839790889073E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="-1.5708 0 3.1416" />
+    <parent link="right_middle_link_0" />
+    <child link="right_middle_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_middle_link_2">
+    <inertial>
+      <origin xyz="0.0137651544503949 -0.00728316628506753 -0.000338376809692148" rpy="0 0 0" />
+      <mass value="0.00444702440314665" />
+      <inertia ixx="3.57403074693285E-07" ixy="-2.93575060166498E-08" ixz="-7.1760539456482E-09" iyy="5.90573291525459E-07" iyz="-1.8079114870554E-09" izz="4.33465006058664E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_joint_2" type="revolute">
+    <origin xyz="0.039999 1.0076E-05 0" rpy="0 0 0" />
+    <parent link="right_middle_link_1" />
+    <child link="right_middle_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_middle_link_3">
+    <inertial>
+      <origin xyz="0.00645673868277941 -0.0108162941258625 3.11419321230577E-06" rpy="0 0 0" />
+      <mass value="0.00370163830505483" />
+      <inertia ixx="1.63153823727457E-07" ixy="6.26138530695939E-08" ixz="-2.89307630278547E-10" iyy="3.84819354077536E-07" iyz="8.54540061916667E-10" izz="3.08433542470026E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_joint_3" type="revolute">
+    <origin xyz="0.03 0 0" rpy="0 0 0" />
+    <parent link="right_middle_link_2" />
+    <child link="right_middle_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_middle_tactile_link_2">
+    <inertial>
+      <origin xyz="0.000109842573988772 0.00994170332209432 0.00443460260777179" rpy="0 0 0" />
+      <mass value="0.00413497489054648" />
+      <inertia ixx="2.22394698997085E-07" ixy="9.02039026654202E-10" ixz="8.94930532865464E-10" iyy="2.2375605501598E-07" iyz="2.47116757376616E-08" izz="3.5457298094318E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_tactile_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_tactile_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_tactile_joint_2" type="fixed">
+    <origin xyz="0.00295438540336046 -0.00677973560068104 0" rpy="1.40509637836892 -1.57079631189374 3.11401126729545" />
+    <parent link="right_middle_link_3" />
+    <child link="right_middle_tactile_link_2" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_middle_tactile_link_1">
+    <inertial>
+      <origin xyz="3.04460016359032E-05 0.0109528249877507 0.000700664923541594" rpy="0 0 0" />
+      <mass value="0.00146306414309843" />
+      <inertia ixx="5.85353582946561E-08" ixy="2.96653346391471E-11" ixz="-5.95293426395652E-13" iyy="6.03565233443411E-08" iyz="-1.48257363077442E-11" izz="1.1599442758332E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_tactile_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_tactile_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_tactile_joint_1" type="fixed">
+    <origin xyz="0.0041708 0.0024988 0" rpy="1.5705 -1.5708 3.1413" />
+    <parent link="right_middle_link_2" />
+    <child link="right_middle_tactile_link_1" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_middle_tactile_link_0">
+    <inertial>
+      <origin xyz="-5.64660317384225E-06 0.014075020640724 0.000861641480541325" rpy="0 0 0" />
+      <mass value="0.00202349083525826" />
+      <inertia ixx="1.39860030184426E-07" ixy="1.33827478692239E-11" ixz="-1.25794008083659E-12" iyy="9.15846254269411E-08" iyz="-2.40330494073692E-10" izz="2.27693004332706E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_tactile_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_middle_tactile_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_middle_tactile_joint_0" type="fixed">
+    <origin xyz="0.00726310654650086 0.00249999999992631 0" rpy="-0.84788407643303 -1.57079631189374 -0.722912356845784" />
+    <parent link="right_middle_link_1" />
+    <child link="right_middle_tactile_link_0" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_ring_link_0">
+    <inertial>
+      <origin xyz="-0.000308197926172649 8.39026348398164E-10 -8.96268664063449E-07" rpy="0 0 0" />
+      <mass value="0.000177081875037463" />
+      <inertia ixx="3.47637077957003E-09" ixy="1.07698694297103E-16" ixz="-4.63197572972229E-13" iyy="6.72350326843281E-10" iyz="-4.88407174630323E-17" izz="3.89708717262616E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ring_joint_0" type="revolute">
+    <origin xyz="0.13528 0.0315 0.0017501" rpy="3.1416 0 3.1416" />
+    <parent link="right_palm_link" />
+    <child link="right_ring_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.35" upper="0.35" effort="0" velocity="0" />
+  </joint>
+  <link name="right_ring_link_1">
+    <inertial>
+      <origin xyz="0.0194586698516268 -0.0089652904897943 -0.000103629565035568" rpy="0 0 0" />
+      <mass value="0.00781862033405023" />
+      <inertia ixx="7.54005682298347E-07" ixy="-1.7880439191953E-07" ixz="-3.16796024704617E-08" iyy="1.810380060335E-06" iyz="-3.54792278265799E-09" izz="1.58839790177761E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ring_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="-1.5708 0 3.1416" />
+    <parent link="right_ring_link_0" />
+    <child link="right_ring_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_ring_link_2">
+    <inertial>
+      <origin xyz="0.0137662762611586 -0.00728104567054219 -0.00033837691764993" rpy="0 0 0" />
+      <mass value="0.00444702438470758" />
+      <inertia ixx="3.57412129752246E-07" ixy="-2.93934265208276E-08" ixz="-7.1757755680097E-09" iyy="5.90564241382686E-07" iyz="-1.80901660750695E-09" izz="4.3346500687057E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ring_joint_2" type="revolute">
+    <origin xyz="0.039998 1.0704E-05 0" rpy="0 0 0" />
+    <parent link="right_ring_link_1" />
+    <child link="right_ring_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_ring_link_3">
+    <inertial>
+      <origin xyz="0.00645798847232748 -0.0108212455508091 3.11419380774614E-06" rpy="0 0 0" />
+      <mass value="0.00370163832829097" />
+      <inertia ixx="1.6315184042749E-07" ixy="6.26103452012076E-08" ixz="-2.89327673265826E-10" iyy="3.84821348337798E-07" iyz="8.5453761667753E-10" izz="3.08433554729858E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ring_joint_3" type="revolute">
+    <origin xyz="0.03 0 0" rpy="0 0 0" />
+    <parent link="right_ring_link_2" />
+    <child link="right_ring_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_ring_tactile_link_2">
+    <inertial>
+      <origin xyz="0.000109842977396524 0.00994169743216822 0.00443460187701622" rpy="0 0 0" />
+      <mass value="0.00413497345425032" />
+      <inertia ixx="2.22394602768751E-07" ixy="9.01956207593262E-10" ixz="8.94940050226042E-10" iyy="2.23756000827499E-07" iyz="2.4711684216646E-08" izz="3.54572822775861E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_tactile_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_tactile_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ring_tactile_joint_2" type="fixed">
+    <origin xyz="0.00295557105770472 -0.00678474247944069 0" rpy="1.4053112662538 -1.57079630572147 3.1138122196849" />
+    <parent link="right_ring_link_3" />
+    <child link="right_ring_tactile_link_2" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_ring_tactile_link_1">
+    <inertial>
+      <origin xyz="3.04459971963988E-05 0.0109528249840939 0.000700664921143068" rpy="0 0 0" />
+      <mass value="0.00146306415357509" />
+      <inertia ixx="5.85353586942361E-08" ixy="2.96656242485767E-11" ixz="-5.952245549025E-13" iyy="6.03565234003192E-08" iyz="-1.48257199580369E-11" izz="1.1599442804481E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_tactile_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_tactile_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ring_tactile_joint_1" type="fixed">
+    <origin xyz="0.0041703799528815 0.00249940030013757 0" rpy="1.57079299275979 -1.57079631189374 3.14145218161306" />
+    <parent link="right_ring_link_2" />
+    <child link="right_ring_tactile_link_1" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_ring_tactile_link_0">
+    <inertial>
+      <origin xyz="-5.64660317459165E-06 0.0140750206407224 0.000861641480541214" rpy="0 0 0" />
+      <mass value="0.00202349083525798" />
+      <inertia ixx="1.39860030184399E-07" ixy="1.33827478931932E-11" ixz="-1.25794008015279E-12" iyy="9.15846254269231E-08" iyz="-2.40330494073465E-10" izz="2.2769300433266E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_tactile_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_ring_tactile_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_ring_tactile_joint_0" type="fixed">
+    <origin xyz="0.00726310654642626 0.00249999999992626 0" rpy="-0.5180483006148 -1.57079631189374 -1.05274816235248" />
+    <parent link="right_ring_link_1" />
+    <child link="right_ring_tactile_link_0" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_thumb_link_0">
+    <inertial>
+      <origin xyz="-4.08049232314411E-06 -0.000308170880180925 -8.96268982503168E-07" rpy="0 0 0" />
+      <mass value="0.00017708187561708" />
+      <inertia ixx="6.72841647369544E-10" ixy="3.71138186155915E-11" ixz="-6.08535525734986E-15" iyy="3.47587946440159E-09" iyz="-4.6315768409107E-13" izz="3.89708717844451E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_thumb_joint_0" type="revolute">
+    <origin xyz="0.039278 -0.0365 0.0017501" rpy="3.1416 0 3.1416" />
+    <parent link="right_palm_link" />
+    <child link="right_thumb_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.35" upper="0.35" effort="0" velocity="0" />
+  </joint>
+  <link name="right_thumb_link_1">
+    <inertial>
+      <origin xyz="0.0207891259490899 0.000590090870854043 -0.00764771233284545" rpy="0 0 0" />
+      <mass value="0.00460890557468254" />
+      <inertia ixx="6.35405194807683E-07" ixy="-2.57180843538623E-07" ixz="5.07818824627121E-07" iyy="1.49087290646374E-06" iyz="1.63529163822397E-07" izz="1.14943022816607E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_thumb_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="-1.5708 0 -1.584" />
+    <parent link="right_thumb_link_0" />
+    <child link="right_thumb_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_thumb_link_2">
+    <inertial>
+      <origin xyz="0.0341353446373334 -0.0134306744709648 -0.00606231293979242" rpy="0 0 0" />
+      <mass value="0.0156698845412996" />
+      <inertia ixx="3.26113891553296E-06" ixy="-1.57642318512308E-07" ixz="-3.45162779988073E-08" iyy="7.95672764673869E-06" iyz="-2.45767947064481E-10" izz="7.62858587051256E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_thumb_joint_2" type="revolute">
+    <origin xyz="0.038999 0.015063 -0.0215" rpy="-1.5708 -0.013237 0" />
+    <parent link="right_thumb_link_1" />
+    <child link="right_thumb_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_thumb_link_3">
+    <inertial>
+      <origin xyz="0.0125262527100985 -0.0142486702399882 -0.0061512495912662" rpy="0 0 0" />
+      <mass value="0.00791689009201751" />
+      <inertia ixx="5.28340747948026E-07" ixy="1.45549742623654E-07" ixz="-1.01000399824491E-08" iyy="1.02732921038006E-06" iyz="2.03941537500566E-09" izz="7.84802032770073E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_thumb_joint_3" type="revolute">
+    <origin xyz="0.065494 0.00086701 0" rpy="0 0 0" />
+    <parent link="right_thumb_link_2" />
+    <child link="right_thumb_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.57" effort="0" velocity="0" />
+  </joint>
+  <link name="right_thumb_tactile_link_1">
+    <inertial>
+      <origin xyz="9.12223445115323E-08 0.0126852683813997 0.00466171978927943" rpy="0 0 0" />
+      <mass value="0.00642512641938372" />
+      <inertia ixx="5.39881056521151E-07" ixy="1.23064821086857E-11" ixz="-5.89597229931505E-13" iyy="4.31069779491668E-07" iyz="6.04503382133294E-08" izz="8.25872091366328E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_tactile_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_tactile_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_thumb_tactile_joint_1" type="fixed">
+    <origin xyz="0.0044234 -0.0069828 -0.0060631" rpy="1.4007 -1.5708 3.1413" />
+    <parent link="right_thumb_link_3" />
+    <child link="right_thumb_tactile_link_1" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="right_thumb_tactile_link_0">
+    <inertial>
+      <origin xyz="2.23202113958099E-07 0.0263867213413109 0.00156454201528233" rpy="0 0 0" />
+      <mass value="0.00353856733894455" />
+      <inertia ixx="7.21430656389004E-07" ixy="-2.45885665581846E-11" ixz="6.50187125637457E-13" iyy="1.45872919694292E-07" iyz="-8.67228040825083E-10" izz="8.60683279406688E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_tactile_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/right/right_thumb_tactile_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_thumb_tactile_joint_0" type="fixed">
+    <origin xyz="0.0063893 0.004585 -0.0060631" rpy="1.584 -1.5708 3.1413" />
+    <parent link="right_thumb_link_2" />
+    <child link="right_thumb_tactile_link_0" />
+    <axis xyz="0 0 0" />
+  </joint>
+  <link name="left_palm">
+    <inertial>
+      <origin xyz="0.05885 -0.0011122 -0.001097" rpy="0 0 0" />
+      <mass value="0.14615" />
+      <inertia ixx="0.00014447" ixy="-4.4918E-06" ixz="7.0438E-06" iyy="0.00015528" iyz="1.4962E-06" izz="0.00027727" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_palm.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_palm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="left_thumb_link_0">
+    <inertial>
+      <origin xyz="0.000226891814931567 4.61207322333124E-11 2.19310208440264E-05" rpy="0 0 0" />
+      <mass value="0.000219582291910095" />
+      <inertia ixx="5.09933811246146E-09" ixy="-2.46720800164735E-16" ixz="-1.09180999964771E-12" iyy="8.35687601155066E-10" iyz="-9.24475289056896E-18" izz="5.36669725591883E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_thumb_joint_0" type="revolute">
+    <origin xyz="0.026 0.0365 -0.00025" rpy="0 0 1.5708" />
+    <parent link="left_palm" />
+    <child link="left_thumb_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.349" upper="0.349" effort="1" velocity="2" />
+  </joint>
+  <link name="left_thumb_link_1">
+    <inertial>
+      <origin xyz="0.0204656655599568 -2.0924075797046E-05 0.00676379871256106" rpy="0 0 0" />
+      <mass value="0.00513633275560094" />
+      <inertia ixx="6.05367966291247E-07" ixy="-2.25532129298426E-07" ixz="-5.21129476582283E-07" iyy="1.57488568485947E-06" iyz="-1.40400742942351E-07" izz="1.20413428835107E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_thumb_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="1.5708 0 0" />
+    <parent link="left_thumb_link_0" />
+    <child link="left_thumb_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_thumb_link_2">
+    <inertial>
+      <origin xyz="0.0291864110249785 -0.0186272609458337 -0.000218588201030342" rpy="0 0 0" />
+      <mass value="0.0167101102599617" />
+      <inertia ixx="2.54287111913888E-06" ixy="8.65486625009416E-07" ixz="-1.60687167930168E-08" iyy="6.42439644397617E-06" iyz="5.59967790264127E-09" izz="6.1137414868082E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_thumb_joint_2" type="revolute">
+    <origin xyz="0.039999 0.009 0.0215" rpy="1.5708 -0.261799388 0" />
+    <parent link="left_thumb_link_1" />
+    <child link="left_thumb_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_thumb_link_3">
+    <inertial>
+      <origin xyz="0.00965025591910657 -0.0143115714322209 -4.71793911410497E-05" rpy="0 0 0" />
+      <mass value="0.0166230921101523" />
+      <inertia ixx="1.43778726221032E-06" ixy="5.47785795327608E-07" ixz="-8.54368130583708E-09" iyy="1.63145704840018E-06" iyz="6.14239176025217E-09" izz="1.46354788972157E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_thumb_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_thumb_joint_3" type="revolute">
+    <origin xyz="0.063556 -0.017141 0" rpy="0 0 0" />
+    <parent link="left_thumb_link_2" />
+    <child link="left_thumb_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_index_link_0">
+    <inertial>
+      <origin xyz="0.000226891814931574 -4.61207391722063E-11 -2.1931020844035E-05" rpy="0 0 0" />
+      <mass value="0.000219582291910095" />
+      <inertia ixx="5.09933811246146E-09" ixy="2.46720758199522E-16" ixz="1.09180999964681E-12" iyy="8.35687601155067E-10" iyz="-9.24476916233652E-18" izz="5.36669725591883E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_index_joint_0" type="revolute">
+    <origin xyz="0.122 0.0315 0.00175" rpy="0 0 0" />
+    <parent link="left_palm" />
+    <child link="left_index_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.349" upper="0.349" effort="1" velocity="2" />
+  </joint>
+  <link name="left_index_link_1">
+    <inertial>
+      <origin xyz="0.0134968488801579 -0.0082164926480711 -0.00012423070599462" rpy="0 0 0" />
+      <mass value="0.0112425437662123" />
+      <inertia ixx="8.24510934717321E-07" ixy="-1.61500825786472E-07" ixz="-6.77095684922023E-09" iyy="1.58702292208414E-06" iyz="-1.30201094756871E-09" izz="1.28198165897553E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_index_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="1.5708 0 0" />
+    <parent link="left_index_link_0" />
+    <child link="left_index_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_index_link_2">
+    <inertial>
+      <origin xyz="0.0137857073448055 -0.00378219545864698 -4.81393113569845E-05" rpy="0 0 0" />
+      <mass value="0.00609408297717352" />
+      <inertia ixx="4.0522265275195E-07" ixy="-2.63296727229235E-08" ixz="-6.22058929331475E-09" iyy="6.69894710350223E-07" iyz="1.14007707609166E-10" izz="4.50586208179035E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_index_joint_2" type="revolute">
+    <origin xyz="0.04 0 0" rpy="0 0 0" />
+    <parent link="left_index_link_1" />
+    <child link="left_index_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_index_link_3">
+    <inertial>
+      <origin xyz="0.010653045513104 -0.00782289409568123 8.38676496021512E-05" rpy="0 0 0" />
+      <mass value="0.00843580676681889" />
+      <inertia ixx="4.20952824850423E-07" ixy="1.30934399182204E-07" ixz="6.1360002367218E-10" iyy="6.48349538589606E-07" iyz="1.48834792878924E-09" izz="4.83378727303359E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_index_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_index_joint_3" type="revolute">
+    <origin xyz="0.03 0 0" rpy="0 0 0" />
+    <parent link="left_index_link_2" />
+    <child link="left_index_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_middle_link_0">
+    <inertial>
+      <origin xyz="0.00022689181493158 -4.61207379914558E-11 -2.19310208440307E-05" rpy="0 0 0" />
+      <mass value="0.000219582291910095" />
+      <inertia ixx="5.09933811246146E-09" ixy="2.46720758435753E-16" ixz="1.09180999964668E-12" iyy="8.35687601155067E-10" iyz="-9.24476779323469E-18" izz="5.36669725591883E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_middle_joint_0" type="revolute">
+    <origin xyz="0.122 0 0.00175" rpy="0 0 0" />
+    <parent link="left_palm" />
+    <child link="left_middle_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.349" upper="0.349" effort="1" velocity="2" />
+  </joint>
+  <link name="left_middle_link_1">
+    <inertial>
+      <origin xyz="0.0134968503616547 -0.00821648268860979 -0.000124226906605018" rpy="0 0 0" />
+      <mass value="0.0112425344934482" />
+      <inertia ixx="8.24510254406344E-07" ixy="-1.61500380674306E-07" ixz="-6.77055456985443E-09" iyy="1.58702188556853E-06" iyz="-1.30175978106446E-09" izz="1.28198069231613E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_middle_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="1.5708 0 0" />
+    <parent link="left_middle_link_0" />
+    <child link="left_middle_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_middle_link_2">
+    <inertial>
+      <origin xyz="0.0137857073448054 -0.00378219545864696 -4.81393113570762E-05" rpy="0 0 0" />
+      <mass value="0.00609408297717341" />
+      <inertia ixx="4.05222652751945E-07" ixy="-2.63296727229229E-08" ixz="-6.22058929331833E-09" iyy="6.69894710350213E-07" iyz="1.14007707609885E-10" izz="4.50586208179029E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_middle_joint_2" type="revolute">
+    <origin xyz="0.04 0 0" rpy="0 0 0" />
+    <parent link="left_middle_link_1" />
+    <child link="left_middle_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_middle_link_3">
+    <inertial>
+      <origin xyz="0.0106530455395141 -0.00782289361780017 8.38667763953919E-05" rpy="0 0 0" />
+      <mass value="0.00843580796640825" />
+      <inertia ixx="4.20952878431164E-07" ixy="1.30934404789214E-07" ixz="6.13593472974387E-10" iyy="6.48349595003246E-07" iyz="1.48836393773238E-09" izz="4.83378743243124E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_middle_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_middle_joint_3" type="revolute">
+    <origin xyz="0.03 0 0" rpy="0 0 0" />
+    <parent link="left_middle_link_2" />
+    <child link="left_middle_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_ring_link_0">
+    <inertial>
+      <origin xyz="0.000226891814931574 -4.61207461111002E-11 -2.19310208440285E-05" rpy="0 0 0" />
+      <mass value="0.000219582291910096" />
+      <inertia ixx="5.09933811246146E-09" ixy="2.46720758889799E-16" ixz="1.09180999964651E-12" iyy="8.35687601155069E-10" iyz="-9.24476780390125E-18" izz="5.36669725591883E-09" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_0.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.666666666666667 0.666666666666667 0.654901960784314 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_0.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_ring_joint_0" type="revolute">
+    <origin xyz="0.122 -0.0315 0.00175" rpy="0 0 0" />
+    <parent link="left_palm" />
+    <child link="left_ring_link_0" />
+    <axis xyz="0 0 1" />
+    <limit lower="-0.349" upper="0.349" effort="1" velocity="2" />
+  </joint>
+  <link name="left_ring_link_1">
+    <inertial>
+      <origin xyz="0.0134968488664202 -0.00821649152910973 -0.000124231330444868" rpy="0 0 0" />
+      <mass value="0.0112425427188638" />
+      <inertia ixx="8.24510845961029E-07" ixy="-1.6150078185395E-07" ixz="-6.77100269676269E-09" iyy="1.58702282394546E-06" iyz="-1.30205429036479E-09" izz="1.28198156880371E-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_1.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_ring_joint_1" type="revolute">
+    <origin xyz="0 0 0" rpy="1.5708 0 0" />
+    <parent link="left_ring_link_0" />
+    <child link="left_ring_link_1" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_ring_link_2">
+    <inertial>
+      <origin xyz="0.0137857073448057 -0.00378219545864726 -4.81393113574632E-05" rpy="0 0 0" />
+      <mass value="0.00609408297717322" />
+      <inertia ixx="4.05222652751932E-07" ixy="-2.63296727229261E-08" ixz="-6.22058929333323E-09" iyy="6.6989471035019E-07" iyz="1.14007707611113E-10" izz="4.50586208179018E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_2.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_ring_joint_2" type="revolute">
+    <origin xyz="0.04 0 0" rpy="0 0 0" />
+    <parent link="left_ring_link_1" />
+    <child link="left_ring_link_2" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="left_ring_link_3">
+    <inertial>
+      <origin xyz="0.010653 -0.0078229 8.3868E-05" rpy="0 0 0" />
+      <mass value="0.0084358" />
+      <inertia ixx="4.2095E-07" ixy="1.3093E-07" ixz="6.136E-10" iyy="6.4835E-07" iyz="1.4883E-09" izz="4.8338E-07" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_3.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/left/left_ring_link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_ring_joint_3" type="revolute">
+    <origin xyz="0.03 0 0" rpy="0 0 0" />
+    <parent link="left_ring_link_2" />
+    <child link="left_ring_link_3" />
+    <axis xyz="0 0 1" />
+    <limit lower="0" upper="1.5707" effort="1" velocity="2" />
+  </joint>
+  <link name="right_dexh13_flange">
+    <inertial>
+      <origin xyz="0.000349350002826 -0.0094493548844 0.0475373918539" rpy="0 0 0" />
+      <mass value="0.123550677717" />
+      <inertia ixx="9.37771278464e-05" ixy="-6.90248829983e-07" ixz="-1.20067966538e-06" iyy="9.43552139863e-05" iyz="-3.17412498873e-05" izz="7.71749051823e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0315008679926 -0.0325 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/flange/dexh13_flange.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="flange_gray">
+        <color rgba="0.35 0.38 0.42 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0315008679926 -0.0325 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/flange/dexh13_flange.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="right_sensor_to_dexh13_flange_joint" type="fixed">
+    <origin xyz="0 0 0.046" rpy="0 0 -2.00712864061" />
+    <parent link="right_sensor_link" />
+    <child link="right_dexh13_flange" />
+  </joint>
+  <joint name="right_dexh13_flange_to_palm_joint" type="fixed">
+    <origin xyz="0 0 0.0863588256836" rpy="0 -1.57079632679 0" />
+    <parent link="right_dexh13_flange" />
+    <child link="right_palm_link" />
+  </joint>
+  <link name="left_dexh13_flange">
+    <inertial>
+      <origin xyz="0.000349350002826 -0.0094493548844 0.0475373918539" rpy="0 0 0" />
+      <mass value="0.123550677717" />
+      <inertia ixx="9.37771278464e-05" ixy="-6.90248829983e-07" ixz="-1.20067966538e-06" iyy="9.43552139863e-05" iyz="-3.17412498873e-05" izz="7.71749051823e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="-0.0315008679926 -0.0325 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/flange/dexh13_flange.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+      <material name="flange_gray">
+        <color rgba="0.35 0.38 0.42 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0315008679926 -0.0325 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://diana7_dual_dexh13_description/meshes/flange/dexh13_flange.STL" scale="0.001 0.001 0.001" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="left_sensor_to_dexh13_flange_joint" type="fixed">
+    <origin xyz="0 0 0.046" rpy="0 0 -0.436332313817" />
+    <parent link="left_sensor_link" />
+    <child link="left_dexh13_flange" />
+  </joint>
+  <joint name="left_dexh13_flange_to_palm_joint" type="fixed">
+    <origin xyz="0 0 0.0863588256836" rpy="0 -1.57079632679 0" />
+    <parent link="left_dexh13_flange" />
+    <child link="left_palm" />
+  </joint>
+  <link name="left_index_tactile_frame_0" />
+  <joint name="left_index_tactile_frame_0_joint" type="fixed">
+    <origin xyz="0.02146 0.0057 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_index_link_1" />
+    <child link="left_index_tactile_frame_0" />
+  </joint>
+  <link name="left_index_tactile_frame_1" />
+  <joint name="left_index_tactile_frame_1_joint" type="fixed">
+    <origin xyz="0.01517 0.0057 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_index_link_2" />
+    <child link="left_index_tactile_frame_1" />
+  </joint>
+  <link name="left_index_tactile_frame_2" />
+  <joint name="left_index_tactile_frame_2_joint" type="fixed">
+    <origin xyz="0.01618 0.00456 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_index_link_3" />
+    <child link="left_index_tactile_frame_2" />
+  </joint>
+  <link name="left_middle_tactile_frame_0" />
+  <joint name="left_middle_tactile_frame_0_joint" type="fixed">
+    <origin xyz="0.02146 0.0057 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_middle_link_1" />
+    <child link="left_middle_tactile_frame_0" />
+  </joint>
+  <link name="left_middle_tactile_frame_1" />
+  <joint name="left_middle_tactile_frame_1_joint" type="fixed">
+    <origin xyz="0.01517 0.0057 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_middle_link_2" />
+    <child link="left_middle_tactile_frame_1" />
+  </joint>
+  <link name="left_middle_tactile_frame_2" />
+  <joint name="left_middle_tactile_frame_2_joint" type="fixed">
+    <origin xyz="0.01618 0.00456 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_middle_link_3" />
+    <child link="left_middle_tactile_frame_2" />
+  </joint>
+  <link name="left_ring_tactile_frame_0" />
+  <joint name="left_ring_tactile_frame_0_joint" type="fixed">
+    <origin xyz="0.02146 0.0057 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_ring_link_1" />
+    <child link="left_ring_tactile_frame_0" />
+  </joint>
+  <link name="left_ring_tactile_frame_1" />
+  <joint name="left_ring_tactile_frame_1_joint" type="fixed">
+    <origin xyz="0.01517 0.0057 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_ring_link_2" />
+    <child link="left_ring_tactile_frame_1" />
+  </joint>
+  <link name="left_ring_tactile_frame_2" />
+  <joint name="left_ring_tactile_frame_2_joint" type="fixed">
+    <origin xyz="0.01618 0.00456 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_ring_link_3" />
+    <child link="left_ring_tactile_frame_2" />
+  </joint>
+  <link name="left_thumb_tactile_frame_0" />
+  <joint name="left_thumb_tactile_frame_0_joint" type="fixed">
+    <origin xyz="0.03212 0.00395 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_thumb_link_2" />
+    <child link="left_thumb_tactile_frame_0" />
+  </joint>
+  <link name="left_thumb_tactile_frame_1" />
+  <joint name="left_thumb_tactile_frame_1_joint" type="fixed">
+    <origin xyz="0.0147 0.00334 0" rpy="-1.57079632679 0 0" />
+    <parent link="left_thumb_link_3" />
+    <child link="left_thumb_tactile_frame_1" />
+  </joint>
+</robot>
