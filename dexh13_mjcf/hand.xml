@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="dexh13_hand_right_description">
+  <!-- Use the meshes shipped with this repository so the model is self-contained. -->
+  <compiler angle="radian" meshdir="../diana7_dual_dexh13_description/meshes/right" />
+  <asset>
+    <mesh name="right_palm_link" content_type="model/stl" file="right_palm_link.STL" />
+    <mesh name="right_index_link_0" content_type="model/stl" file="right_index_link_0.STL" />
+    <mesh name="right_index_link_1" content_type="model/stl" file="right_index_link_1.STL" />
+    <mesh name="right_index_link_2" content_type="model/stl" file="right_index_link_2.STL" />
+    <mesh name="right_index_link_3" content_type="model/stl" file="right_index_link_3.STL" />
+    <mesh name="right_index_tactile_link_2" content_type="model/stl" file="right_index_tactile_link_2.STL" />
+    <mesh name="right_index_tactile_link_1" content_type="model/stl" file="right_index_tactile_link_1.STL" />
+    <mesh name="right_index_tactile_link_0" content_type="model/stl" file="right_index_tactile_link_0.STL" />
+    <mesh name="right_middle_link_0" content_type="model/stl" file="right_middle_link_0.STL" />
+    <mesh name="right_middle_link_1" content_type="model/stl" file="right_middle_link_1.STL" />
+    <mesh name="right_middle_link_2" content_type="model/stl" file="right_middle_link_2.STL" />
+    <mesh name="right_middle_link_3" content_type="model/stl" file="right_middle_link_3.STL" />
+    <mesh name="right_middle_tactile_link_2" content_type="model/stl" file="right_middle_tactile_link_2.STL" />
+    <mesh name="right_middle_tactile_link_1" content_type="model/stl" file="right_middle_tactile_link_1.STL" />
+    <mesh name="right_middle_tactile_link_0" content_type="model/stl" file="right_middle_tactile_link_0.STL" />
+    <mesh name="right_ring_link_0" content_type="model/stl" file="right_ring_link_0.STL" />
+    <mesh name="right_ring_link_1" content_type="model/stl" file="right_ring_link_1.STL" />
+    <mesh name="right_ring_link_2" content_type="model/stl" file="right_ring_link_2.STL" />
+    <mesh name="right_ring_link_3" content_type="model/stl" file="right_ring_link_3.STL" />
+    <mesh name="right_ring_tactile_link_2" content_type="model/stl" file="right_ring_tactile_link_2.STL" />
+    <mesh name="right_ring_tactile_link_1" content_type="model/stl" file="right_ring_tactile_link_1.STL" />
+    <mesh name="right_ring_tactile_link_0" content_type="model/stl" file="right_ring_tactile_link_0.STL" />
+    <mesh name="right_thumb_link_0" content_type="model/stl" file="right_thumb_link_0.STL" />
+    <mesh name="right_thumb_link_1" content_type="model/stl" file="right_thumb_link_1.STL" />
+    <mesh name="right_thumb_link_2" content_type="model/stl" file="right_thumb_link_2.STL" />
+    <mesh name="right_thumb_link_3" content_type="model/stl" file="right_thumb_link_3.STL" />
+    <mesh name="right_thumb_tactile_link_1" content_type="model/stl" file="right_thumb_tactile_link_1.STL" />
+    <mesh name="right_thumb_tactile_link_0" content_type="model/stl" file="right_thumb_tactile_link_0.STL" />
+    <texture name="skybox" type="skybox" builtin="gradient" rgb1="0.78 0.88 1.00" rgb2="0.34 0.46 0.62" width="512" height="512" />
+    <texture name="tex_floor" type="2d" builtin="checker" rgb1="0.56 0.68 0.80" rgb2="0.38 0.50 0.66" width="512" height="512" mark="edge" markrgb="0.90 0.95 1.00" />
+    <material name="mat_floor" texture="tex_floor" texuniform="true" texrepeat="6 6" reflectance="0.12" rgba="0.72 0.82 0.92 1" />
+  </asset>
+  <worldbody>
+    <body name="pacini_hand" pos="0 0 0">
+      <body name="right_palm_link">
+        <inertial pos="0.0619401 0.000633778 -0.00922402" quat="0.0354548 0.719176 -0.043078 0.692585" mass="0.114799" diaginertia="0.000233664 0.000145027 0.000115126" />
+        <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_palm_link" class="dexh13_collision" name="right_palm_link_collision_geom" />
+        <geom name="right_palm_link_external_collision_geom" class="dexh13_external_collision" type="box" size="0.055 0.052 0.014" pos="0.075 0 0.008" />
+        <body name="right_index_link_0" pos="0.13528 -0.0315 0.0017501" quat="1.34924e-11 -3.67321e-06 1 -3.67321e-06">
+          <inertial pos="-0.000308198 8.39026e-10 -8.96269e-07" quat="0.5 0.5 -0.5 0.5" mass="0.000177082" diaginertia="3.89709e-09 3.47637e-09 6.7235e-10" />
+          <joint name="right_index_joint_0" pos="0 0 0" axis="0 0 1" range="-0.35 0.35" damping="0.2" frictionloss="0.02" />
+          <geom type="mesh" rgba="1 1 1 1" mesh="right_index_link_0" class="dexh13_collision" name="right_index_link_0_collision_geom" />
+          <geom name="right_index_link_0_external_collision_geom" class="dexh13_external_collision" type="box" size="0.012 0.011 0.010" pos="0.010 0 0" />
+          <body name="right_index_link_1" quat="-2.59734e-06 2.59735e-06 -0.707108 0.707105">
+            <inertial pos="0.0194587 -0.00896529 -0.000103629" quat="0.464125 0.450838 0.527595 0.550433" mass="0.00781862" diaginertia="1.83983e-06 1.58956e-06 7.2339e-07" />
+            <joint name="right_index_joint_1" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+            <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_index_link_1" class="dexh13_collision" name="right_index_link_1_collision_geom" />
+            <body name="right_index_link_2" pos="0.039999 1.0069e-05 0">
+              <inertial pos="0.0137651 -0.00728319 -0.000338377" quat="0.490554 0.444894 0.50653 0.552136" mass="0.00444702" diaginertia="5.94218e-07 4.34131e-07 3.53093e-07" />
+              <joint name="right_index_joint_2" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_index_link_2" class="dexh13_collision" name="right_index_link_2_collision_geom" />
+              <body name="right_index_link_3" pos="0.030001 -1.0072e-05 0">
+                <inertial pos="0.00645567 -0.0108151 3.11427e-06" quat="0.559081 0.560861 0.428834 0.434701" mass="0.00370164" diaginertia="4.01289e-07 3.08429e-07 1.46689e-07" />
+                <joint name="right_index_joint_3" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+                <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_index_link_3" class="dexh13_collision" name="right_index_link_3_collision_geom" />
+                <body name="right_index_tactile_link_2" pos="0.0029533 -0.0067786 0" quat="-0.449339 0.545982 0.449337 0.54598">
+                  <inertial pos="0.000109845 0.0099417 0.0044346" quat="0.492824 0.51082 -0.390038 0.586564" mass="0.00413497" diaginertia="3.59093e-07 2.22546e-07 2.19084e-07" />
+                  <geom type="mesh" rgba="1 1 1 1" mesh="right_index_tactile_link_2" class="dexh13_tactile" name="index_tip_tactile_geom" />
+                  <site name="site_index_tip_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                  <!-- Patch-level taxel site; size is half of tactile_layout.patch_size. -->
+                  <site name="right_index_tip_site" type="box" pos="0 0 0.001" size="0.013956 0.0128635 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+                </body>
+              </body>
+              <body name="right_index_tactile_link_1" pos="0.0041708 0.0024988 0" quat="-0.499929 0.500073 0.499927 0.500071">
+                <inertial pos="3.0446e-05 0.0109528 0.000700665" quat="0.00566275 0.707083 -0.00585126 0.707084" mass="0.00146306" diaginertia="1.15994e-07 6.0357e-08 5.85349e-08" />
+                  <geom type="mesh" rgba="1 1 1 1" mesh="right_index_tactile_link_1" class="dexh13_tactile" name="index_middle_tactile_geom" />
+                  <site name="site_index_middle_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                  <site name="right_index_middle_site" type="box" pos="0 0 0.001" size="0.0113675 0.011706 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+              </body>
+            </body>
+            <body name="right_index_tactile_link_0" pos="0.00726311 0.0025 0" quat="0.5 -0.5 -0.5 -0.5">
+              <inertial pos="-5.6466e-06 0.014075 0.000861641" quat="0.499485 0.500507 -0.500376 0.499631" mass="0.00202349" diaginertia="2.27693e-07 1.3986e-07 9.15842e-08" />
+              <geom type="mesh" rgba="1 1 1 1" mesh="right_index_tactile_link_0" class="dexh13_tactile" name="index_proximal_tactile_geom" />
+              <site name="site_index_proximal_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+              <site name="right_index_proximal_site" type="box" pos="0 0 0.001" size="0.0150775 0.012447 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+            </body>
+          </body>
+        </body>
+        <body name="right_middle_link_0" pos="0.13528 0 0.0017501" quat="1.34924e-11 -3.67321e-06 1 -3.67321e-06">
+          <inertial pos="-0.000308198 8.39026e-10 -8.96269e-07" quat="0.5 0.5 -0.5 0.5" mass="0.000177082" diaginertia="3.89709e-09 3.47637e-09 6.7235e-10" />
+          <joint name="right_middle_joint_0" pos="0 0 0" axis="0 0 1" range="-0.35 0.35" damping="0.2" frictionloss="0.02" />
+          <geom type="mesh" rgba="1 1 1 1" mesh="right_middle_link_0" class="dexh13_collision" name="right_middle_link_0_collision_geom" />
+          <geom name="right_middle_link_0_external_collision_geom" class="dexh13_external_collision" type="box" size="0.012 0.011 0.010" pos="0.010 0 0" />
+          <body name="right_middle_link_1" quat="-2.59734e-06 2.59735e-06 -0.707108 0.707105">
+            <inertial pos="0.0194587 -0.00896529 -0.00010363" quat="0.464125 0.450838 0.527595 0.550433" mass="0.00781862" diaginertia="1.83984e-06 1.58956e-06 7.2339e-07" />
+            <joint name="right_middle_joint_1" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+            <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_middle_link_1" class="dexh13_collision" name="right_middle_link_1_collision_geom" />
+            <body name="right_middle_link_2" pos="0.039999 1.0076e-05 0">
+              <inertial pos="0.0137652 -0.00728317 -0.000338377" quat="0.490553 0.444893 0.506531 0.552136" mass="0.00444702" diaginertia="5.94218e-07 4.34131e-07 3.53093e-07" />
+              <joint name="right_middle_joint_2" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_middle_link_2" class="dexh13_collision" name="right_middle_link_2_collision_geom" />
+              <body name="right_middle_link_3" pos="0.03 0 0">
+                <inertial pos="0.00645674 -0.0108163 3.11419e-06" quat="0.559081 0.560861 0.428834 0.434701" mass="0.00370164" diaginertia="4.01289e-07 3.08429e-07 1.46689e-07" />
+                <joint name="right_middle_joint_3" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+                <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_middle_link_3" class="dexh13_collision" name="right_middle_link_3_collision_geom" />
+                <body name="right_middle_tactile_link_2" pos="0.00295439 -0.00677974 0" quat="-0.449422 0.545912 0.449422 0.545912">
+                  <inertial pos="0.000109843 0.0099417 0.0044346" quat="0.492819 0.510825 -0.390032 0.586568" mass="0.00413497" diaginertia="3.59093e-07 2.22547e-07 2.19084e-07" />
+                  <geom type="mesh" rgba="1 1 1 1" mesh="right_middle_tactile_link_2" class="dexh13_tactile" name="middle_tip_tactile_geom" />
+                  <site name="site_middle_tip_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                  <site name="right_middle_tip_site" type="box" pos="0 0 0.001" size="0.013956 0.0128635 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+                </body>
+              </body>
+              <body name="right_middle_tactile_link_1" pos="0.0041708 0.0024988 0" quat="-0.499854 0.500148 0.499852 0.500146">
+                <inertial pos="3.0446e-05 0.0109528 0.000700665" quat="0.00566275 0.707083 -0.00585126 0.707084" mass="0.00146306" diaginertia="1.15994e-07 6.0357e-08 5.85349e-08" />
+                <geom type="mesh" rgba="1 1 1 1" mesh="right_middle_tactile_link_1" class="dexh13_tactile" name="middle_middle_tactile_geom" />
+                <site name="site_middle_middle_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                <site name="right_middle_middle_site" type="box" pos="0 0 0.001" size="0.0113675 0.011706 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+              </body>
+            </body>
+            <body name="right_middle_tactile_link_0" pos="0.00726311 0.0025 0" quat="0.5 -0.5 -0.5 -0.5">
+              <inertial pos="-5.6466e-06 0.014075 0.000861641" quat="0.499485 0.500507 -0.500376 0.499631" mass="0.00202349" diaginertia="2.27693e-07 1.3986e-07 9.15842e-08" />
+              <geom type="mesh" rgba="1 1 1 1" mesh="right_middle_tactile_link_0" class="dexh13_tactile" name="middle_proximal_tactile_geom" />
+              <site name="site_middle_proximal_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+              <site name="right_middle_proximal_site" type="box" pos="0 0 0.001" size="0.0150775 0.012447 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+            </body>
+          </body>
+        </body>
+        <body name="right_ring_link_0" pos="0.13528 0.0315 0.0017501" quat="1.34924e-11 -3.67321e-06 1 -3.67321e-06">
+          <inertial pos="-0.000308198 8.39026e-10 -8.96269e-07" quat="0.5 0.5 -0.5 0.5" mass="0.000177082" diaginertia="3.89709e-09 3.47637e-09 6.7235e-10" />
+          <joint name="right_ring_joint_0" pos="0 0 0" axis="0 0 1" range="-0.35 0.35" damping="0.2" frictionloss="0.02" />
+          <geom type="mesh" rgba="1 1 1 1" mesh="right_ring_link_0" class="dexh13_collision" name="right_ring_link_0_collision_geom" />
+          <geom name="right_ring_link_0_external_collision_geom" class="dexh13_external_collision" type="box" size="0.012 0.011 0.010" pos="0.010 0 0" />
+          <body name="right_ring_link_1" quat="-2.59734e-06 2.59735e-06 -0.707108 0.707105">
+            <inertial pos="0.0194587 -0.00896529 -0.00010363" quat="0.464125 0.450838 0.527595 0.550433" mass="0.00781862" diaginertia="1.83984e-06 1.58956e-06 7.2339e-07" />
+            <joint name="right_ring_joint_1" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+            <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_ring_link_1" class="dexh13_collision" name="right_ring_link_1_collision_geom" />
+            <body name="right_ring_link_2" pos="0.039998 1.0704e-05 0">
+              <inertial pos="0.0137663 -0.00728105 -0.000338377" quat="0.490511 0.444854 0.506565 0.552174" mass="0.00444702" diaginertia="5.94218e-07 4.34131e-07 3.53093e-07" />
+              <joint name="right_ring_joint_2" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_ring_link_2" class="dexh13_collision" name="right_ring_link_2_collision_geom" />
+              <body name="right_ring_link_3" pos="0.03 0 0">
+                <inertial pos="0.00645799 -0.0108212 3.11419e-06" quat="0.559078 0.560857 0.428838 0.434705" mass="0.00370164" diaginertia="4.01289e-07 3.08429e-07 1.46689e-07" />
+                <joint name="right_ring_joint_3" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+                <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_ring_link_3" class="dexh13_collision" name="right_ring_link_3_collision_geom" />
+                <body name="right_ring_tactile_link_2" pos="0.00295557 -0.00678474 0" quat="-0.449426 0.545909 0.449426 0.545909">
+                  <inertial pos="0.000109843 0.0099417 0.0044346" quat="0.492824 0.51082 -0.390038 0.586564" mass="0.00413497" diaginertia="3.59093e-07 2.22546e-07 2.19084e-07" />
+                  <geom type="mesh" rgba="1 1 1 1" mesh="right_ring_tactile_link_2" class="dexh13_tactile" name="ring_tip_tactile_geom" />
+                  <site name="site_ring_tip_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                  <site name="right_ring_tip_site" type="box" pos="0 0 0.001" size="0.013956 0.0128635 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+                </body>
+              </body>
+              <body name="right_ring_tactile_link_1" pos="0.00417038 0.0024994 0" quat="-0.499964 0.500036 0.499964 0.500036">
+                <inertial pos="3.0446e-05 0.0109528 0.000700665" quat="0.0056628 0.707083 -0.00585132 0.707084" mass="0.00146306" diaginertia="1.15994e-07 6.0357e-08 5.85349e-08" />
+                <geom type="mesh" rgba="1 1 1 1" mesh="right_ring_tactile_link_1" class="dexh13_tactile" name="ring_middle_tactile_geom" />
+                <site name="site_ring_middle_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                <site name="right_ring_middle_site" type="box" pos="0 0 0.001" size="0.0113675 0.011706 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+              </body>
+            </body>
+            <body name="right_ring_tactile_link_0" pos="0.00726311 0.0025 0" quat="0.5 -0.5 -0.5 -0.5">
+              <inertial pos="-5.6466e-06 0.014075 0.000861641" quat="0.499485 0.500507 -0.500376 0.499631" mass="0.00202349" diaginertia="2.27693e-07 1.3986e-07 9.15842e-08" />
+              <geom type="mesh" rgba="1 1 1 1" mesh="right_ring_tactile_link_0" class="dexh13_tactile" name="ring_proximal_tactile_geom" />
+              <site name="site_ring_proximal_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+              <site name="right_ring_proximal_site" type="box" pos="0 0 0.001" size="0.0150775 0.012447 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+            </body>
+          </body>
+        </body>
+        <body name="right_thumb_link_0" pos="0.039278 -0.0365 0.0017501" quat="1.34924e-11 -3.67321e-06 1 -3.67321e-06">
+          <inertial pos="-4.08049e-06 -0.000308171 -8.96269e-07" quat="0.00468012 0.707091 -0.00468012 0.707091" mass="0.000177082" diaginertia="3.89709e-09 3.47637e-09 6.7235e-10" />
+          <joint name="right_thumb_joint_0" pos="0 0 0" axis="0 0 1" range="-0.35 0.35" damping="0.2" frictionloss="0.02" />
+          <geom type="mesh" rgba="1 1 1 1" mesh="right_thumb_link_0" class="dexh13_collision" name="right_thumb_link_0_collision_geom" />
+          <geom name="right_thumb_link_0_external_collision_geom" class="dexh13_external_collision" type="box" size="0.012 0.011 0.010" pos="0.010 0 0" />
+          <body name="right_thumb_link_1" quat="0.496687 -0.496689 0.503291 -0.503289">
+            <inertial pos="0.0207891 0.000590091 -0.00764771" quat="0.259227 0.585446 0.641818 0.422047" mass="0.00460891" diaginertia="1.56581e-06 1.46138e-06 2.48517e-07" />
+            <joint name="right_thumb_joint_1" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+            <geom type="mesh" rgba="1 1 1 1" mesh="right_thumb_link_1" class="dexh13_collision" name="right_thumb_link_1_collision_geom" />
+            <body name="right_thumb_link_2" pos="0.038999 0.015063 -0.0215" quat="0.70709 -0.707093 -0.00467994 -0.00467996">
+              <inertial pos="0.0341353 -0.0134307 -0.00606231" quat="0.492787 0.490299 0.50563 0.510985" mass="0.0156699" diaginertia="7.96202e-06 7.62886e-06 3.25558e-06" />
+              <joint name="right_thumb_joint_2" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+              <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_thumb_link_2" class="dexh13_collision" name="right_thumb_link_2_collision_geom" />
+              <body name="right_thumb_link_3" pos="0.065494 0.00086701 0">
+                <inertial pos="0.0125263 -0.0142487 -0.00615125" quat="0.571637 0.551135 0.422969 0.436554" mass="0.00791689" diaginertia="1.06668e-06 7.85157e-07 4.88632e-07" />
+                <joint name="right_thumb_joint_3" pos="0 0 0" axis="0 0 1" range="0 1.57" damping="0.2" frictionloss="0.02" />
+                <geom type="mesh" rgba="0.752941 0.752941 0.752941 1" mesh="right_thumb_link_3" class="dexh13_collision" name="right_thumb_link_3_collision_geom" />
+                <body name="right_thumb_tactile_link_1" pos="0.0044234 -0.0069828 -0.0060631" quat="-0.455642 0.540733 0.45564 0.540731">
+                  <inertial pos="9.12223e-08 0.0126853 0.00466172" quat="0.535709 0.461538 -0.461481 0.535755" mass="0.00642513" diaginertia="8.34921e-07 5.39881e-07 4.22021e-07" />
+                  <geom type="mesh" rgba="1 1 1 1" mesh="right_thumb_tactile_link_1" class="dexh13_tactile" name="thumb_tip_tactile_geom" />
+                  <site name="site_thumb_tip_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                  <site name="right_thumb_tip_site" type="box" pos="0 0 0.001" size="0.017653 0.015141 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+                </body>
+              </body>
+              <body name="right_thumb_tactile_link_0" pos="0.0063893 0.004585 -0.0060631" quat="-0.503218 0.496763 0.503216 0.496761">
+                <inertial pos="2.23202e-07 0.0263867 0.00156454" quat="0.499707 0.500293 -0.500314 0.499686" mass="0.00353857" diaginertia="8.60684e-07 7.21431e-07 1.45872e-07" />
+                <geom type="mesh" rgba="1 1 1 1" mesh="right_thumb_tactile_link_0" class="dexh13_tactile" name="thumb_proximal_tactile_geom" />
+                <site name="site_thumb_proximal_sensor_frame" pos="0 0 0" quat="1 0 0 0" size="0.001" group="3" rgba="0.9 0.2 0.2 0.65" />
+                <site name="right_thumb_proximal_site" type="box" pos="0 0 0.001" size="0.026261 0.012344 0.001" group="3" rgba="0.95 0.15 0.15 0.35" />
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <default>
+    <default class="pacini_skin">
+      <geom friction="1.2 0.02 0.002" solref="0.015 1" solimp="0.92 0.985 0.003" condim="4" />
+    </default>
+    <default class="dexh13_tactile">
+      <geom friction="1.2 0.02 0.002" solref="0.015 1" solimp="0.92 0.985 0.003" condim="4" contype="1" conaffinity="1" />
+    </default>
+    <default class="dexh13_collision">
+      <geom friction="0.8 0.02 0.001" solref="0.01 1" solimp="0.90 0.98 0.002" condim="4" contype="0" conaffinity="0" />
+    </default>
+    <default class="dexh13_external_collision">
+      <geom friction="0.9 0.02 0.001" solref="0.012 1" solimp="0.90 0.98 0.002" condim="4" contype="2" conaffinity="0" group="4" rgba="0.1 0.7 0.25 0.18" />
+    </default>
+  </default>
+  <option gravity="0 0 0" integrator="implicitfast" timestep="0.0005" />
+  <keyframe>
+    <key name="home" qpos="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" ctrl="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0" />
+  </keyframe>
+  <actuator>
+    <position name="ctrl_right_index_joint_0" joint="right_index_joint_0" kp="8" ctrlrange="-0.35 0.35" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_index_joint_1" joint="right_index_joint_1" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_index_joint_2" joint="right_index_joint_2" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_index_joint_3" joint="right_index_joint_3" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_middle_joint_0" joint="right_middle_joint_0" kp="8" ctrlrange="-0.35 0.35" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_middle_joint_1" joint="right_middle_joint_1" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_middle_joint_2" joint="right_middle_joint_2" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_middle_joint_3" joint="right_middle_joint_3" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_ring_joint_0" joint="right_ring_joint_0" kp="8" ctrlrange="-0.35 0.35" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_ring_joint_1" joint="right_ring_joint_1" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_ring_joint_2" joint="right_ring_joint_2" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_ring_joint_3" joint="right_ring_joint_3" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_thumb_joint_0" joint="right_thumb_joint_0" kp="8" ctrlrange="-0.35 0.35" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_thumb_joint_1" joint="right_thumb_joint_1" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_thumb_joint_2" joint="right_thumb_joint_2" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+    <position name="ctrl_right_thumb_joint_3" joint="right_thumb_joint_3" kp="8" ctrlrange="0 1.57" forcelimited="true" forcerange="-1 1" />
+  </actuator>
+  <!-- One MuJoCo touch channel per tactile patch. These are the 11 right-hand
+       channels described by config/tactile_layout.yaml. -->
+  <sensor>
+    <touch name="right_index_proximal_touch" site="right_index_proximal_site" />
+    <touch name="right_index_middle_touch" site="right_index_middle_site" />
+    <touch name="right_index_tip_touch" site="right_index_tip_site" />
+    <touch name="right_middle_proximal_touch" site="right_middle_proximal_site" />
+    <touch name="right_middle_middle_touch" site="right_middle_middle_site" />
+    <touch name="right_middle_tip_touch" site="right_middle_tip_site" />
+    <touch name="right_ring_proximal_touch" site="right_ring_proximal_site" />
+    <touch name="right_ring_middle_touch" site="right_ring_middle_site" />
+    <touch name="right_ring_tip_touch" site="right_ring_tip_site" />
+    <touch name="right_thumb_proximal_touch" site="right_thumb_proximal_site" />
+    <touch name="right_thumb_tip_touch" site="right_thumb_tip_site" />
+  </sensor>
+  <visual>
+    <headlight diffuse="0.65 0.65 0.70" ambient="0.28 0.30 0.34" specular="0.18 0.18 0.20" />
+    <rgba haze="0.58 0.70 0.84 1" />
+    <global azimuth="120" elevation="-20" />
+  </visual>
+</mujoco>

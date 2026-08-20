@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="dexh13_free_object">
+  <include file="hand.xml" />
+  <worldbody>
+    <geom name="floor" type="plane" size="0.5 0.5 0.01" pos="0 0 -0.05" material="mat_floor" />
+    <body name="free_sphere_target" mocap="true" pos="0.219 -0.0315 0.026">
+      <geom name="free_sphere_target_geom" type="sphere" size="0.003" rgba="1.0 0.8 0.1 0.45" contype="0" conaffinity="0" />
+    </body>
+    <body name="free_sphere" pos="0.219 -0.0315 0.026">
+      <freejoint name="free_sphere_joint" />
+      <geom name="free_sphere_geom" type="sphere" size="0.006" mass="0.05" rgba="0.1 0.45 1 1" friction="1.0 0.02 0.002" solref="0.01 1" solimp="0.90 0.98 0.002" contype="0" conaffinity="3" />
+    </body>
+  </worldbody>
+  <equality>
+    <weld name="free_sphere_physical_drag" body1="free_sphere" body2="free_sphere_target" solref="0.08 1" solimp="0.80 0.95 0.001" torquescale="0.02" />
+  </equality>
+</mujoco>

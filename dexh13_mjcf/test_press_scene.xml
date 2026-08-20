@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="dexh13_press_test">
+  <include file="hand.xml" />
+  <worldbody>
+    <geom name="floor" type="plane" size="0.5 0.5 0.01" pos="0 0 -0.05" material="mat_floor" />
+    <body name="press_sphere" pos="0.219 -0.0315 0.02">
+      <joint name="press_z" type="slide" axis="0 0 1" damping="1" />
+      <geom name="press_sphere_geom" type="sphere" size="0.006" mass="0.02" contype="0" conaffinity="1" />
+    </body>
+  </worldbody>
+</mujoco>

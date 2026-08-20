@@ -4,9 +4,9 @@
   "pressure_unit": "newton",
   "channel_count": 22,
   "notes": [
-    "Right frames are physical tactile links from the source URDF.",
-    "Left frames are massless semantic frames fitted to the integrated pad surfaces.",
-    "patch_size is [length, width] and is metadata for future simulator sites."
+    "The URDF contains 1140 generated DH13 taxel frames per hand (2280 total), attached to the phalanx links.",
+    "The 22 entries below remain coarse patch-level channel metadata for compatibility with existing consumers.",
+    "patch_size is [length, width] and is metadata for simulator sites."
   ],
   "channels": [
     {

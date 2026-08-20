@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="dexh13_interactive_press">
+  <include file="hand.xml" />
+  <worldbody>
+    <geom name="floor" type="plane" size="0.5 0.5 0.01" pos="0 0 -0.05" material="mat_floor" />
+    <body name="press_probe" pos="0.219 -0.0315 0.026">
+      <joint name="press_z" type="slide" axis="0 0 1" range="-0.040 0.015" limited="true" damping="2.0" stiffness="8.0" springref="-0.026" />
+      <geom name="press_probe_geom" type="sphere" size="0.006" mass="0.05" rgba="0.1 0.45 1 1" friction="1.0 0.02 0.002" solref="0.01 1" solimp="0.90 0.98 0.002" contype="0" conaffinity="1" />
+    </body>
+  </worldbody>
+</mujoco>

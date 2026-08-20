@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mujoco model="dexh13_automated_collection">
+  <include file="hand.xml" />
+  <worldbody>
+    <geom name="floor" type="plane" size="0.5 0.5 0.01" pos="0 0 -0.05" material="mat_floor" />
+
+    <body name="auto_spherical_target" mocap="true" pos="0 0 1" />
+    <body name="auto_spherical" pos="0 0 1">
+      <freejoint name="auto_spherical_joint" />
+      <geom name="auto_spherical_geom" type="ellipsoid" size="0.016 0.040 0.016" mass="0.03"
+            rgba="0.15 0.45 0.95 1" friction="1.0 0.02 0.002"
+            solref="0.01 1" solimp="0.90 0.98 0.002" margin="0.0015" contype="0" conaffinity="3" />
+    </body>
+
+    <body name="auto_cylindrical_target" mocap="true" pos="0 0 1" />
+    <body name="auto_cylindrical" pos="0 0 1">
+      <freejoint name="auto_cylindrical_joint" />
+      <geom name="auto_cylindrical_geom" type="cylinder" size="0.014 0.040"
+            quat="0.70710678 0.70710678 0 0" mass="0.03"
+            rgba="0.15 0.75 0.40 1" friction="1.0 0.02 0.002"
+            solref="0.01 1" solimp="0.90 0.98 0.002" margin="0.0015" contype="0" conaffinity="3" />
+    </body>
+
+    <body name="auto_cuboidal_target" mocap="true" pos="0 0 1" />
+    <body name="auto_cuboidal" pos="0 0 1">
+      <freejoint name="auto_cuboidal_joint" />
+      <geom name="auto_cuboidal_geom" type="box" size="0.020 0.040 0.016" mass="0.03"
+            rgba="0.95 0.55 0.12 1" friction="1.0 0.02 0.002"
+            solref="0.01 1" solimp="0.90 0.98 0.002" margin="0.0015" contype="0" conaffinity="3" />
+    </body>
+
+    <body name="auto_irregular_target" mocap="true" pos="0 0 1" />
+    <body name="auto_irregular" pos="0 0 1">
+      <freejoint name="auto_irregular_joint" />
+      <geom name="auto_irregular_core_geom" type="box" size="0.017 0.027 0.013" mass="0.02"
+            rgba="0.75 0.25 0.75 1" friction="1.0 0.02 0.002"
+            solref="0.01 1" solimp="0.90 0.98 0.002" margin="0.0015" contype="0" conaffinity="3" />
+      <geom name="auto_irregular_lobe_a_geom" type="sphere" size="0.012" pos="0.015 0.020 0.006" mass="0.008"
+            rgba="0.65 0.20 0.70 1" friction="1.0 0.02 0.002"
+            solref="0.01 1" solimp="0.90 0.98 0.002" margin="0.0015" contype="0" conaffinity="3" />
+      <geom name="auto_irregular_lobe_b_geom" type="sphere" size="0.010" pos="-0.012 -0.021 -0.004" mass="0.006"
+            rgba="0.85 0.35 0.80 1" friction="1.0 0.02 0.002"
+            solref="0.01 1" solimp="0.90 0.98 0.002" margin="0.0015" contype="0" conaffinity="3" />
+    </body>
+  </worldbody>
+  <equality>
+    <weld name="auto_spherical_weld" body1="auto_spherical" body2="auto_spherical_target"
+          solref="0.005 1" solimp="0.95 0.995 0.001" torquescale="0.02" />
+    <weld name="auto_cylindrical_weld" body1="auto_cylindrical" body2="auto_cylindrical_target"
+          solref="0.005 1" solimp="0.95 0.995 0.001" torquescale="0.02" />
+    <weld name="auto_cuboidal_weld" body1="auto_cuboidal" body2="auto_cuboidal_target"
+          solref="0.005 1" solimp="0.95 0.995 0.001" torquescale="0.02" />
+    <weld name="auto_irregular_weld" body1="auto_irregular" body2="auto_irregular_target"
+          solref="0.005 1" solimp="0.95 0.995 0.001" torquescale="0.02" />
+  </equality>
+</mujoco>
