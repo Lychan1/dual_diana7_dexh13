@@ -1845,12 +1845,12 @@
     </collision>
   </link>
   <joint name="right_sensor_to_dexh13_flange_joint" type="fixed">
-    <origin xyz="0 0 0.046" rpy="0 0 -2.00712864061" />
+    <origin xyz="0.014 -0.02846 0.074" rpy="1.57078802587 0.00000586142 -2.68779868756" />
     <parent link="right_sensor_link" />
     <child link="right_dexh13_flange" />
   </joint>
   <joint name="right_dexh13_flange_to_palm_joint" type="fixed">
-    <origin xyz="0 0 0.0863588256836" rpy="0 -1.57079632679 0" />
+    <origin xyz="-0.00188914404 0.00299943662 0.06653594754" rpy="2.92260538187 -1.57079544121 1.78978734387" />
     <parent link="right_dexh13_flange" />
     <child link="right_palm_link" />
   </joint>
@@ -1877,12 +1877,12 @@
     </collision>
   </link>
   <joint name="left_sensor_to_dexh13_flange_joint" type="fixed">
-    <origin xyz="0 0 0.046" rpy="0 0 -0.436332313817" />
+    <origin xyz="-0.043 0.013 0.042" rpy="1.564269285 0.016179064 0.462469649" />
     <parent link="left_sensor_link" />
     <child link="left_dexh13_flange" />
   </joint>
   <joint name="left_dexh13_flange_to_palm_joint" type="fixed">
-    <origin xyz="0 0 0.0863588256836" rpy="0 -1.57079632679 0" />
+    <origin xyz="0.028555454 0.042861867 0.067315626" rpy="-2.671200996 -1.432453113 1.125485105" />
     <parent link="left_dexh13_flange" />
     <child link="left_palm" />
   </joint>
