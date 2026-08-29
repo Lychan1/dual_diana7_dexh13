@@ -51,3 +51,34 @@ python -m mujoco.viewer --mjcf dexh13_mjcf/hand.xml
 The scene files can be opened in the same way when an object or contact test is
 needed. Sensor values are available through the names in the `<sensor>` block,
 or through their numeric indices in `data.sensordata`.
+
+## Sequential hemisphere experiment
+
+`sequential_hemisphere_scene.xml` adds an SI-unit (metre) 100 mm diameter,
+200 mm long cylinder and a 20 mm radius hemispherical cap at the platform
+centre. `run_sequential_hemisphere.py` solves a parallel palm pose, aligns each
+of the 11 right-hand tactile patches in turn, closes only that patch, and
+writes first-contact events plus all 1,140 right-hand raw taxel values to JSON.
+The cylinder is visual/static geometry (`contype=2`) so only the hemispherical
+cap can generate tactile contacts for this protocol.
+
+Run it with the existing Conda environment:
+
+```bash
+conda run -n dexh13sim python dexh13_mjcf/run_sequential_hemisphere.py \
+  --scene dexh13_mjcf/sequential_hemisphere_scene.xml \
+  --out /tmp/dexh13_sequential_hemisphere.json
+```
+
+On macOS, run with `mjpython --viewer` to watch the right arm move through
+the IK approach and the 11 sequential tactile stages in a live MuJoCo window:
+
+```bash
+cd dexh13_mjcf
+mjpython run_sequential_hemisphere.py --viewer
+```
+
+By default each stage isolates the target patch's collision geometry and snaps
+the final wrist pose after a smooth approach for millimetre-scale repeatability.
+Use `--no-isolate-patches` to measure natural neighbouring-patch crosstalk, or
+`--no-snap-stage` for actuator-only wrist motion.

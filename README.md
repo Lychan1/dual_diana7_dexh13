@@ -9,6 +9,12 @@ MJCF model with the complete DH13 tactile layout.
   dual-arm URDF.
 - `dexh13_mjcf/`: dual-arm MJCF, viewer/test scenes, generator, and the
   repository-local 1140-site DH13 layout reference.
+- `docs/FREECAD_MCP_SETUP.md`: macOS FreeCAD MCP installation, Codex
+  configuration, RPC startup, verification, and troubleshooting.
+
+For the FreeCAD MCP setup used to inspect or edit `.FCStd` files, read
+[`docs/FREECAD_MCP_SETUP.md`](docs/FREECAD_MCP_SETUP.md) before changing the
+local Codex or FreeCAD configuration.
 
 The tactile model has 1140 taxel frames and 1140 touch sensors per hand, 2280
 for the two-hand model. The old `*.npy` files were incomplete and are not part

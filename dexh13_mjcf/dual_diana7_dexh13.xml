@@ -118,11 +118,11 @@
                         <inertial pos="-0.00063130312 -0.00079416088 0.0243277126" mass="0.3063178042108" fullinertia="0.000126933917860274 0.000127360299818112 0.000242410809919104 2.57222420485171E-07 7.89819122602258E-07 -3.58467069572874E-08" />
                         <geom name="right_sensor_link_visual_geom" type="mesh" mesh="mesh_dual_arm_right_sensor_link_STL" class="urdf_visual" contype="0" conaffinity="0" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" pos="0 0 0" quat="1 0 0 0" />
                         <geom name="right_sensor_link_collision_geom" type="mesh" mesh="mesh_dual_arm_right_sensor_link_STL" class="urdf_collision" contype="0" conaffinity="0" pos="0 0 0" quat="1 0 0 0" />
-                        <body name="right_dexh13_flange" pos="0 0 0.046" quat="0.537299608 0 0 -0.843391446">
+                        <body name="right_dexh13_flange" pos="0.014 -0.02846 0.074" quat="0.159065937 0.159068655 -0.688979689 -0.688986341">
                           <inertial pos="0.000349350003 -0.00944935488 0.0475373919" mass="0.123550677717" fullinertia="9.37771278464e-05 9.43552139863e-05 7.71749051823e-05 -6.90248829983e-07 -1.20067966538e-06 -3.17412498873e-05" />
                           <geom name="right_dexh13_flange_visual_geom" type="mesh" mesh="mesh_flange_dexh13_flange_STL" class="urdf_visual" contype="0" conaffinity="0" rgba="0.35 0.38 0.42 1" pos="-0.031500868 -0.0325 0" quat="1 0 0 0" />
                           <geom name="right_dexh13_flange_collision_geom" type="mesh" mesh="mesh_flange_dexh13_flange_STL" class="urdf_collision" contype="0" conaffinity="0" pos="-0.031500868 -0.0325 0" quat="1 0 0 0" />
-                          <body name="right_palm_link" pos="0 0 0.0863588257" quat="0.707106781 0 -0.707106781 0">
+                          <body name="right_palm_link" pos="-0.00188914404 0.00299943662 0.0665359475" quat="-0.500000672 0.499999232 0.500001201 0.499998896">
                             <inertial pos="0.061940089 0.000633777554 -0.00922401738" mass="0.114799444276486" fullinertia="0.000115656477451761 0.000144675400179227 0.000233485399410628 3.24423761159877E-06 4.40448289255065E-06 -1.26436937122323E-06" />
                             <geom name="right_palm_link_visual_geom" type="mesh" mesh="mesh_right_right_palm_link_STL" class="urdf_visual" contype="0" conaffinity="0" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" pos="0 0 0" quat="1 0 0 0" />
                             <geom name="right_palm_link_collision_geom" type="mesh" mesh="mesh_right_right_palm_link_STL" class="urdf_collision" contype="0" conaffinity="0" pos="0 0 0" quat="1 0 0 0" />
@@ -2611,11 +2611,11 @@
                         <inertial pos="-0.000631303062 -0.000794160782 0.0243277126" mass="0.306317803863396" fullinertia="0.000126933917921841 0.000127360300281999 0.000242410810367609 2.57222336669211E-07 7.89818976807741E-07 -3.5846649010714E-08" />
                         <geom name="left_sensor_link_visual_geom" type="mesh" mesh="mesh_dual_arm_left_sensor_link_STL" class="urdf_visual" contype="0" conaffinity="0" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" pos="0 0 0" quat="1 0 0 0" />
                         <geom name="left_sensor_link_collision_geom" type="mesh" mesh="mesh_dual_arm_left_sensor_link_STL" class="urdf_collision" contype="0" conaffinity="0" pos="0 0 0" quat="1 0 0 0" />
-                        <body name="left_dexh13_flange" pos="0 0 0.046" quat="0.976296007 0 0 -0.216439614">
+                        <body name="left_dexh13_flange" pos="-0.0144359709 0.0274770063 0.073985422" quat="0.691813146 0.684698979 0.16710547 0.157027519">
                           <inertial pos="0.000349350003 -0.00944935488 0.0475373919" mass="0.123550677717" fullinertia="9.37771278464e-05 9.43552139863e-05 7.71749051823e-05 -6.90248829983e-07 -1.20067966538e-06 -3.17412498873e-05" />
                           <geom name="left_dexh13_flange_visual_geom" type="mesh" mesh="mesh_flange_dexh13_flange_STL" class="urdf_visual" contype="0" conaffinity="0" rgba="0.35 0.38 0.42 1" pos="-0.031500868 -0.0325 0" quat="1 0 0 0" />
                           <geom name="left_dexh13_flange_collision_geom" type="mesh" mesh="mesh_flange_dexh13_flange_STL" class="urdf_collision" contype="0" conaffinity="0" pos="-0.031500868 -0.0325 0" quat="1 0 0 0" />
-                          <body name="left_palm" pos="0 0 0.0863588257" quat="0.707106781 0 -0.707106781 0">
+                          <body name="left_palm" pos="-0.00294541425 0.010361867 0.067315626" quat="0.489296643 -0.538784501 -0.520743417 -0.446235756">
                             <inertial pos="0.05885 -0.0011122 -0.001097" mass="0.14615" fullinertia="0.00014447 0.00015528 0.00027727 -4.4918E-06 7.0438E-06 1.4962E-06" />
                             <geom name="left_palm_visual_geom" type="mesh" mesh="mesh_left_left_palm_STL" class="urdf_visual" contype="0" conaffinity="0" rgba="0.79216 0.81961 0.93333 1" pos="0 0 0" quat="1 0 0 0" />
                             <geom name="left_palm_collision_geom" type="mesh" mesh="mesh_left_left_palm_STL" class="urdf_collision" contype="0" conaffinity="0" pos="0 0 0" quat="1 0 0 0" />

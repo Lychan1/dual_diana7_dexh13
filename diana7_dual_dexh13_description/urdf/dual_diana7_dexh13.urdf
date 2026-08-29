@@ -1877,12 +1877,12 @@
     </collision>
   </link>
   <joint name="left_sensor_to_dexh13_flange_joint" type="fixed">
-    <origin xyz="-0.043 0.013 0.042" rpy="1.564269285 0.016179064 0.462469649" />
+    <origin xyz="-0.01443597095 0.02747700630 0.07398542195" rpy="1.564269285 0.016179064 0.462469649" />
     <parent link="left_sensor_link" />
     <child link="left_dexh13_flange" />
   </joint>
   <joint name="left_dexh13_flange_to_palm_joint" type="fixed">
-    <origin xyz="0.028555454 0.042861867 0.067315626" rpy="-2.671200996 -1.432453113 1.125485105" />
+    <origin xyz="-0.00294541425 0.01036186700 0.06731562602" rpy="-2.671200996 -1.432453113 1.125485105" />
     <parent link="left_dexh13_flange" />
     <child link="left_palm" />
   </joint>
