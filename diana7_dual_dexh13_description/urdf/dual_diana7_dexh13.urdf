@@ -1850,7 +1850,7 @@
     <child link="right_dexh13_flange" />
   </joint>
   <joint name="right_dexh13_flange_to_palm_joint" type="fixed">
-    <origin xyz="-0.00188914404 0.00299943662 0.06653594754" rpy="2.92260538187 -1.57079544121 1.78978734387" />
+    <origin xyz="-0.00019594765 0.00749938129 0.06908118221" rpy="0 -1.5707963267949 -1.5707963267949" />
     <parent link="right_dexh13_flange" />
     <child link="right_palm_link" />
   </joint>
